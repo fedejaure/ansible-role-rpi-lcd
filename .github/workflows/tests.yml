@@ -1,0 +1,45 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  linting:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: Linting
+        run: |
+          pip install pre-commit
+          pre-commit run --all-files
+  tests:
+    needs: linting
+    name: molecule-${{ matrix.distro }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distro:
+          - debian9
+          - debian10
+          - ubuntu1804
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: Install system deps
+        shell: bash
+        run: pip install pipenv
+      - name: Install dev requirements
+        shell: bash
+        run: pipenv install --dev
+      - name: Run Molecule tests.
+        run: molecule test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
