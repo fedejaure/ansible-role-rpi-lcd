@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "db732dff87f1ff7d25c9705580fa4b3041ec09ddb7a63445c49fbbe6c2c119ff"
+            "sha256": "ac62acdc0ee2cd6288e163ce83dd940f385ebf13c7006b6bebe4714e2ec4daec"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -328,6 +328,13 @@
             ],
             "version": "==0.3.1"
         },
+        "docker": {
+            "hashes": [
+                "sha256:431a268f2caf85aa30613f9642da274c62f6ee8bae7d70d968e01529f7d6af93",
+                "sha256:ba118607b0ba6bfc1b236ec32019a355c47b5d012d01d976467d4692ef443929"
+            ],
+            "version": "==4.3.0"
+        },
         "fasteners": {
             "hashes": [
                 "sha256:007e4d2b2d4a10093f67e932e5166722d2eab83b77724156e92ad013c6226574",
@@ -424,14 +431,15 @@
         },
         "molecule": {
             "extras": [
+                "docker",
                 "lint"
             ],
             "hashes": [
-                "sha256:69dd71aeefc54acf9e45f3fd13a52c8198d64966c8298703a4432d24888a9a60",
-                "sha256:89a36f7896315649f62a260f6a93bc5e6e731716d463f5b71d50efbc0159d3bc"
+                "sha256:42d0c661b52074b00a620466df367ddab9c3682875e6d685bfc93487ef0479cc",
+                "sha256:6fb202099ff52bc427c6bd8f46f13b49b3d5812daa6880960a0fd0562e8a9be6"
             ],
             "index": "pypi",
-            "version": "==3.0.7"
+            "version": "==3.0.8"
         },
         "monotonic": {
             "hashes": [
@@ -675,6 +683,13 @@
                 "sha256:e0305af10299a7fb0d69393d8f04cb2965dda9351140d11ac8db4e5e3970451b"
             ],
             "version": "==20.0.31"
+        },
+        "websocket-client": {
+            "hashes": [
+                "sha256:0fc45c961324d79c781bab301359d5a1b00b13ad1b10415a4780229ef71a5549",
+                "sha256:d735b91d6d1692a6a181f2a8c9e0238e5f6373356f561bb9dc4c7af36f452010"
+            ],
+            "version": "==0.57.0"
         },
         "yamllint": {
             "hashes": [
