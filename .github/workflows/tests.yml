@@ -36,7 +36,7 @@ jobs:
         run: pip install pipenv
       - name: Install dev requirements
         shell: bash
-        run: pipenv install --dev
+        run: pipenv sync --dev
       - name: Run Molecule tests.
         run: molecule test
         env:
