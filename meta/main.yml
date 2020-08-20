@@ -1,5 +1,6 @@
 dependencies: []
 galaxy_info:
+  role_name: rpi_lcd
   author: Federico Jaureguialzo
   description: Raspberry Pi LCD configuration
   license: license (MIT)
