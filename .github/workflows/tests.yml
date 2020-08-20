@@ -38,7 +38,7 @@ jobs:
         shell: bash
         run: pipenv sync --dev
       - name: Run Molecule tests.
-        run: molecule test
+        run: pipenv run molecule test
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
