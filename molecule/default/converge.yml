@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include rpi_lcd"
+      include_role:
+        name: fedejaure.rpi_lcd
