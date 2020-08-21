@@ -10,6 +10,10 @@ galaxy_info:
       versions:
         - stretch
         - buster
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
   galaxy_tags:
     - system
     - arm
