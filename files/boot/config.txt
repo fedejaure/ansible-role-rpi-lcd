@@ -1079,7 +1079,7 @@ initramfs initramfs-linux.img followkernel
 ##
 ##     Default off.
 ##
-#dtparam=audio=off
+dtparam=audio=off
 
 ## i2c_arm
 ##     Enable the ARM's i2c interface
