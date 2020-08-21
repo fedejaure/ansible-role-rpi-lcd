@@ -4,4 +4,4 @@
   tasks:
     - name: "Include rpi_lcd"
       include_role:
-        name: rpi_lcd
+        name: fedejaure.rpi_lcd

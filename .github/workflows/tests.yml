@@ -1,5 +1,7 @@
 name: tests
 on: [push, pull_request]
+env:
+  ROLE_NAME: fedejaure.rpi_lcd
 jobs:
   linting:
     name: Linting
@@ -27,17 +29,22 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
+        with:
+          path: "${{ env.ROLE_NAME }}"
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
       - name: Install system deps
         shell: bash
+        working-directory: "./${{ env.ROLE_NAME }}"
         run: pip install pipenv
       - name: Install dev requirements
         shell: bash
+        working-directory: "./${{ env.ROLE_NAME }}"
         run: pipenv sync --dev
       - name: Run Molecule tests.
+        working-directory: "./${{ env.ROLE_NAME }}"
         run: pipenv run molecule test
         env:
           PY_COLORS: '1'
