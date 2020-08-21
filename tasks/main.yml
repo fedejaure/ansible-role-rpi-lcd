@@ -1,2 +1,13 @@
 ---
-# tasks file for rpi_lcd
+- name: Clean lib input conf
+  file:
+    state: absent
+    path: /etc/X11/xorg.conf.d/40-libinput.conf
+
+- name: Make sure xorg.conf.d exists
+  file:
+    state: directory
+    path: /etc/X11/xorg.conf.d
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
