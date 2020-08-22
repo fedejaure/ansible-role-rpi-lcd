@@ -1,4 +1,6 @@
 ---
+- import_tasks: required-vars.yml
+
 - name: Clean lib input conf
   file:
     state: absent
