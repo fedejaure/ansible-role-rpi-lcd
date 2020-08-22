@@ -11,3 +11,9 @@
     owner: root
     group: root
     mode: u=rwx,g=rx,o=x
+
+- include: raspbian-facts.yml
+  when: ansible_distribution == 'Debian'
+
+- include: ubuntu-facts.yml
+  when: ansible_distribution == 'Ubuntu'
