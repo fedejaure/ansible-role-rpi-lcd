@@ -1,0 +1,28 @@
+---
+- name: Copy fresh boot config
+  copy:
+    src: boot/config.txt
+    dest: "{{ boot_config_path }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+    force: no
+
+- name: Configure boot config
+  lineinfile:
+    path: "{{ boot_config_path }}"
+    state: present
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
+    - regexp: ^#?hdmi_force_hotplug=
+      line: hdmi_force_hotplug=1
+    - regexp: ^#?dtparam=i2c_arm=
+      line: dtparam=i2c_arm=on
+    - regexp: ^#?dtparam=spi=
+      line: dtparam=spi=on
+    - regexp: ^#?enable_uart=
+      line: enable_uart=1

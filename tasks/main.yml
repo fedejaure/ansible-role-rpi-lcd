@@ -17,3 +17,5 @@
 
 - include: ubuntu-facts.yml
   when: ansible_distribution == 'Ubuntu'
+
+- import_tasks: boot-config.yml
