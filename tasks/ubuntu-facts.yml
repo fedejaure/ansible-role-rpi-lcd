@@ -10,3 +10,4 @@
 - name: Set Ubuntu facts
   set_fact:
     boot_config_path: "/boot/firmware/config.txt"
+    boot_overlays_dir: "/boot/firmware/overlays/"

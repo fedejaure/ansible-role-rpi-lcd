@@ -1,4 +1,17 @@
 ---
+- name: Copy boot overlay DTB files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  with_items:
+    - src: boot/overlays/tft35a-overlay.dtb
+      dest: "{{ boot_overlays_dir }}"
+    - src: boot/overlays/tft35a-overlay.dtb
+      dest: "{{ boot_overlays_dir }}tft35a-overlay.dtbo"
+
 - name: Copy fresh boot config
   copy:
     src: boot/config.txt
@@ -26,3 +39,5 @@
       line: dtparam=spi=on
     - regexp: ^#?enable_uart=
       line: enable_uart=1
+    - regexp: ^#?dtoverlay=
+      line: dtoverlay=tft35a:rotate=90
