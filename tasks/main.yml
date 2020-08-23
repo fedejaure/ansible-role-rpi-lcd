@@ -10,3 +10,5 @@
 - import_tasks: boot-config.yml
 
 - import_tasks: x11-config.yml
+
+- import_tasks: touch-config.yml
