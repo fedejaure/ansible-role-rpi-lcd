@@ -41,3 +41,12 @@
       line: enable_uart=1
     - regexp: ^#?dtoverlay=
       line: dtoverlay=tft35a:rotate=90
+
+- name: Copy cmdline file
+  template:
+    src: boot/cmdline.txt
+    dest: /boot/cmdline.txt
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  when: ansible_distribution == 'Debian'
