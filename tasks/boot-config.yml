@@ -50,3 +50,12 @@
     group: root
     mode: u=rwx,g=rx,o=x
   when: ansible_distribution == 'Debian'
+
+- name: Copy inittab file
+  copy:
+    src: etc/inittab
+    dest: /etc/inittab
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  when: ansible_distribution == 'Debian'
