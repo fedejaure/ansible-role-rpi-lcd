@@ -1,0 +1,61 @@
+---
+- name: Copy boot overlay DTB files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  with_items:
+    - src: boot/overlays/tft35a-overlay.dtb
+      dest: "{{ boot_overlays_dir }}"
+    - src: boot/overlays/tft35a-overlay.dtb
+      dest: "{{ boot_overlays_dir }}tft35a-overlay.dtbo"
+
+- name: Copy fresh boot config
+  copy:
+    src: boot/config.txt
+    dest: "{{ boot_config_path }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+    force: no
+
+- name: Configure boot config
+  lineinfile:
+    path: "{{ boot_config_path }}"
+    state: present
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items:
+    - regexp: ^#?hdmi_force_hotplug=
+      line: hdmi_force_hotplug=1
+    - regexp: ^#?dtparam=i2c_arm=
+      line: dtparam=i2c_arm=on
+    - regexp: ^#?dtparam=spi=
+      line: dtparam=spi=on
+    - regexp: ^#?enable_uart=
+      line: enable_uart=1
+    - regexp: ^#?dtoverlay=
+      line: dtoverlay=tft35a:rotate=90
+
+- name: Copy cmdline file
+  template:
+    src: boot/cmdline.txt
+    dest: /boot/cmdline.txt
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  when: ansible_distribution == 'Debian'
+
+- name: Copy inittab file
+  copy:
+    src: etc/inittab
+    dest: /etc/inittab
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  when: ansible_distribution == 'Debian'
