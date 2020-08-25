@@ -1,4 +1,5 @@
 ---
+# Variable setup
 - import_tasks: required-vars.yml
 
 - include: raspbian-facts.yml
@@ -7,8 +8,7 @@
 - include: ubuntu-facts.yml
   when: ansible_distribution == 'Ubuntu'
 
-- import_tasks: boot-config.yml
-
-- import_tasks: x11-config.yml
-
-- import_tasks: touch-config.yml
+# Configure LCD
+- import_tasks: configure-boot.yml
+- import_tasks: configure-x11.yml
+- import_tasks: configure-touch.yml

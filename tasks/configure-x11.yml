@@ -17,7 +17,7 @@
   notify:
     - Reboot host and wait for it to restart
 
-- name: Copy boot overlay DTB files
+- name: Copy xorg conf files
   copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
