@@ -11,6 +11,7 @@
       dest: "{{ boot_overlays_dir }}"
     - src: boot/overlays/tft35a-overlay.dtb
       dest: "{{ boot_overlays_dir }}tft35a-overlay.dtbo"
+  notify: Reboot host and wait for it to restart
 
 - name: Copy fresh boot config
   copy:
@@ -41,6 +42,7 @@
       line: enable_uart=1
     - regexp: ^#?dtoverlay=
       line: dtoverlay=tft35a:rotate=90
+  notify: Reboot host and wait for it to restart
 
 - name: Copy cmdline file
   template:
@@ -50,6 +52,7 @@
     group: root
     mode: u=rwx,g=rx,o=x
   when: ansible_distribution == 'Debian'
+  notify: Reboot host and wait for it to restart
 
 - name: Copy inittab file
   copy:
@@ -59,3 +62,4 @@
     group: root
     mode: u=rwx,g=rx,o=x
   when: ansible_distribution == 'Debian'
+  notify: Reboot host and wait for it to restart
