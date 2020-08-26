@@ -17,7 +17,7 @@
 - name: Copy fresh boot config
   copy:
     src: boot/config.txt
-    dest: "{{ boot_config_path }}"
+    dest: "{{ boot_config_dir }}config.txt"
     owner: root
     group: root
     mode: u=rwx,g=rx,o=x
@@ -25,7 +25,7 @@
 
 - name: Configure boot config
   lineinfile:
-    path: "{{ boot_config_path }}"
+    path: "{{ boot_config_dir }}config.txt"
     state: present
     owner: root
     group: root
@@ -49,7 +49,7 @@
 - name: Copy cmdline file
   template:
     src: boot/cmdline.txt
-    dest: /boot/cmdline.txt
+    dest: "{{ boot_config_dir }}cmdline.txt"
     owner: root
     group: root
     mode: u=rwx,g=rx,o=x

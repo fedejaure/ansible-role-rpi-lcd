@@ -7,11 +7,15 @@
   with_items:
     - lcd_size
 
+- name: Include distribution-specific vars.
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution }}.yml"
+      skip: true
+
 - include: raspbian-facts.yml
   when: ansible_distribution == 'Debian'
-
-- include: ubuntu-facts.yml
-  when: ansible_distribution == 'Ubuntu'
 
 # Configure LCD
 - import_tasks: configure-boot.yml

@@ -1,1 +1,4 @@
 ---
+boot_config_dir: "/boot/"
+
+boot_overlays_dir: "{{ boot_config_dir }}overlays/"

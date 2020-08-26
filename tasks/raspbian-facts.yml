@@ -1,11 +1,11 @@
 ---
 - name: Check that the boot cmdline file exists
   stat:
-    path: /boot/cmdline.txt
+    path: "{{ boot_config_dir }}cmdline.txt"
   register: cmdline_file
 
 - name: Read boot cmdline content
-  command: cat /boot/cmdline.txt
+  command: "cat {{ boot_config_dir }}cmdline.txt"
   register: cmdline_content
   changed_when: false
   when: cmdline_file.stat.exists
@@ -13,5 +13,3 @@
 - name: Set Raspbian facts
   set_fact:
     is_noobs: "{{ 'stdout' in cmdline_content and 'root=/dev/mmcblk0p7' in cmdline_content.stdout }}"
-    boot_config_path: "/boot/config.txt"
-    boot_overlays_dir: "/boot/overlays/"
