@@ -14,8 +14,10 @@
   with_items:
     - path: /etc/X11/xorg.conf.d
     - path: /usr/share/X11/xorg.conf.d
+  notify:
+    - Reboot host and wait for it to restart
 
-- name: Copy boot overlay DTB files
+- name: Copy xorg conf files
   copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
@@ -27,3 +29,5 @@
       dest: /etc/X11/xorg.conf.d/99-calibration.conf
     - src: usr/share/X11/xorg.conf.d/99-fbturbo.conf
       dest: /usr/share/X11/xorg.conf.d/99-fbturbo.conf
+  notify:
+    - Reboot host and wait for it to restart

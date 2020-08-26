@@ -11,11 +11,13 @@
       dest: "{{ boot_overlays_dir }}"
     - src: boot/overlays/tft35a-overlay.dtb
       dest: "{{ boot_overlays_dir }}tft35a-overlay.dtbo"
+  notify:
+    - Reboot host and wait for it to restart
 
 - name: Copy fresh boot config
   copy:
     src: boot/config.txt
-    dest: "{{ boot_config_path }}"
+    dest: "{{ boot_config_dir }}config.txt"
     owner: root
     group: root
     mode: u=rwx,g=rx,o=x
@@ -23,7 +25,7 @@
 
 - name: Configure boot config
   lineinfile:
-    path: "{{ boot_config_path }}"
+    path: "{{ boot_config_dir }}config.txt"
     state: present
     owner: root
     group: root
@@ -41,15 +43,19 @@
       line: enable_uart=1
     - regexp: ^#?dtoverlay=
       line: dtoverlay=tft35a:rotate=90
+  notify:
+    - Reboot host and wait for it to restart
 
 - name: Copy cmdline file
   template:
     src: boot/cmdline.txt
-    dest: /boot/cmdline.txt
+    dest: "{{ boot_config_dir }}cmdline.txt"
     owner: root
     group: root
     mode: u=rwx,g=rx,o=x
   when: ansible_distribution == 'Debian'
+  notify:
+    - Reboot host and wait for it to restart
 
 - name: Copy inittab file
   copy:
@@ -59,3 +65,5 @@
     group: root
     mode: u=rwx,g=rx,o=x
   when: ansible_distribution == 'Debian'
+  notify:
+    - Reboot host and wait for it to restart
