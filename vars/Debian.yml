@@ -1,4 +1,4 @@
 ---
-boot_config_dir: "/boot/"
+__boot_config_dir: "/boot/"
 
-boot_overlays_dir: "{{ boot_config_dir }}overlays/"
+__boot_overlays_dir: "{{ boot_config_dir }}overlays/"

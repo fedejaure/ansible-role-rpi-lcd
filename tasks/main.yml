@@ -14,6 +14,14 @@
         - "{{ ansible_distribution }}.yml"
       skip: true
 
+- name: Define boot_config_dir.
+  set_fact:
+    boot_config_dir: "{{ __boot_config_dir }}"
+
+- name: Define boot_overlays_dir.
+  set_fact:
+    boot_overlays_dir: "{{ __boot_overlays_dir }}"
+
 - include: raspbian-facts.yml
   when: ansible_distribution == 'Debian'
 
