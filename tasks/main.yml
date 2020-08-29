@@ -13,12 +13,9 @@
     - files:
         - "{{ ansible_distribution }}.yml"
 
-- name: Define boot_config_dir.
+- name: Define distribution facts.
   set_fact:
     boot_config_dir: "{{ __boot_config_dir }}"
-
-- name: Define boot_overlays_dir.
-  set_fact:
     boot_overlays_dir: "{{ __boot_overlays_dir }}"
 
 - name: Include LCD type-specific vars.

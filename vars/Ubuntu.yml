@@ -1,4 +1,4 @@
 ---
 __boot_config_dir: "/boot/firmware/"
 
-__boot_overlays_dir: "{{ boot_config_dir }}overlays/"
+__boot_overlays_dir: "{{ __boot_config_dir }}overlays/"
