@@ -5,7 +5,7 @@
     msg: "Variable '{{ item }}' is not defined"
   when: item not in vars
   with_items:
-    - lcd_size
+    - lcd_type
 
 - name: Include distribution-specific vars.
   include_vars: "{{ item }}"

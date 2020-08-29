@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   vars:
-    lcd_size: 3.5
+    lcd_type: MPI3501
   tasks:
     - name: "Include rpi_lcd"
       include_role:
