@@ -12,7 +12,6 @@
   with_first_found:
     - files:
         - "{{ ansible_distribution }}.yml"
-      skip: true
 
 - name: Define boot_config_dir.
   set_fact:
@@ -21,6 +20,19 @@
 - name: Define boot_overlays_dir.
   set_fact:
     boot_overlays_dir: "{{ __boot_overlays_dir }}"
+
+- name: Include LCD type-specific vars.
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ lcd_type }}.yml"
+
+- name: Define LCD type facts.
+  set_fact:
+    overlay_dtb_file: "{{ __overlay_dtb_file }}"
+    lcd_boot_config_options: "{{ __lcd_boot_config_options }}"
+    lcd_calibration: "{{ __lcd_calibration }}"
+    lcd_swap_axes: "{{ __lcd_swap_axes }}"
 
 - include: raspbian-facts.yml
   when: ansible_distribution == 'Debian'

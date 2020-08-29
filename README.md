@@ -23,6 +23,10 @@ Available variables are listed below, along with default values (see defaults/ma
 
 Select the LCD type to be configured.
 
+    lcd_rotate: 90
+
+Set the LCD screen rotation.
+
 Dependencies
 ------------
 
