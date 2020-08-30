@@ -1,5 +1,7 @@
-Ansible Role: RPi LCD
-=====================
+Ansible Role: Raspberry Pi LCD
+==============================
+
+![tests](https://github.com/fedejaure/ansible-role-rpi-lcd/workflows/tests/badge.svg)
 
 Configures the LCD driver of Raspberry Pi.
 
