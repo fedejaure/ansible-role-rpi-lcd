@@ -7,6 +7,11 @@
   with_items:
     - lcd_type
 
+- name: Validate LCD type
+  fail:
+    msg: "LCD type '{{ lcd_type }}' is not supported"
+  when: lcd_type not in ['MPI3501']
+
 - name: Include distribution-specific vars.
   include_vars: "{{ item }}"
   with_first_found:
