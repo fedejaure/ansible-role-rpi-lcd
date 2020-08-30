@@ -68,5 +68,5 @@ Credits
 For a detail configuring information see [LCD-show][LCD-show].
 
 
-[fedejaure]: https://github.com/fedejaurefedejaure
+[fedejaure]: https://github.com/fedejaure
 [LCD-show]: https://github.com/goodtft/LCD-show
