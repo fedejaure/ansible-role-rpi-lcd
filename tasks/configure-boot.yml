@@ -7,10 +7,10 @@
     group: root
     mode: u=rwx,g=rx,o=x
   with_items:
-    - src: boot/overlays/tft35a-overlay.dtb
+    - src: "boot/overlays/{{ overlay_dtb_file }}"
       dest: "{{ boot_overlays_dir }}"
-    - src: boot/overlays/tft35a-overlay.dtb
-      dest: "{{ boot_overlays_dir }}tft35a-overlay.dtbo"
+    - src: "boot/overlays/{{ overlay_dtb_file }}"
+      dest: "{{ boot_overlays_dir }}{{ overlay_dtb_file }}o"
   notify:
     - Reboot host and wait for it to restart
 
@@ -32,17 +32,7 @@
     mode: u=rwx,g=rx,o=x
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
-  with_items:
-    - regexp: ^#?hdmi_force_hotplug=
-      line: hdmi_force_hotplug=1
-    - regexp: ^#?dtparam=i2c_arm=
-      line: dtparam=i2c_arm=on
-    - regexp: ^#?dtparam=spi=
-      line: dtparam=spi=on
-    - regexp: ^#?enable_uart=
-      line: enable_uart=1
-    - regexp: ^#?dtoverlay=
-      line: dtoverlay=tft35a:rotate=90
+  with_items: "{{ lcd_boot_config_options }}"
   notify:
     - Reboot host and wait for it to restart
 
