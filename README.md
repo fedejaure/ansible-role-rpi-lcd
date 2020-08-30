@@ -25,7 +25,13 @@ Select the LCD type to be configured.
 
     lcd_rotate: 90
 
-Set the LCD screen rotation.
+Set the LCD screen rotation. It depends on LCD type:
+
+  * 3.5inch RPi Display (MPI3501):
+    - 0
+    - 90
+    - 180
+    - 270
 
 Dependencies
 ------------
