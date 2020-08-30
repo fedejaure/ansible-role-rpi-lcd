@@ -44,10 +44,13 @@ Example Playbook
 ----------------
 
     - hosts: pi
-      vars_files:
-        - vars/main.yml
+
+      vars:
+        lcd_type: MPI3501
+        lcd_rotate: 90
+
       roles:
-         - { role: fedejaure.rpi_lcd }
+         - fedejaure.rpi_lcd
 
 License
 -------
