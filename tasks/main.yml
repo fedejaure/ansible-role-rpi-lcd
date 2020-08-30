@@ -28,7 +28,7 @@
   set_fact:
     overlay_dtb_file: "{{ __overlay_dtb_file }}"
     lcd_boot_config_options: "{{ __lcd_boot_config_options }}"
-    lcd_calibration: "{{ __lcd_calibration }}"
+    lcd_calibration: "{{ __lcd_calibrations[lcd_rotate] }}"
     lcd_swap_axes: "{{ __lcd_swap_axes }}"
 
 - include: raspbian-facts.yml

@@ -19,6 +19,4 @@ __lcd_calibrations:
   180: 3880 268 3936 227
   270: 227 3936 3880 268
 
-__lcd_calibration: "{{ __lcd_calibrations[lcd_rotate]}}"
-
 __lcd_swap_axes: "{{ 0 if lcd_rotate in [0, 180] else 1 }}"
