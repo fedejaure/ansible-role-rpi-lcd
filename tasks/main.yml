@@ -1,0 +1,50 @@
+---
+# Variable setup
+- name: Check required variables
+  fail:
+    msg: "Variable '{{ item }}' is not defined"
+  when: item not in vars
+  with_items:
+    - lcd_type
+
+- name: Validate LCD type
+  fail:
+    msg: "LCD type '{{ lcd_type }}' is not supported"
+  when: lcd_type not in ['MPI3501']
+
+- name: Include distribution-specific vars.
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution }}.yml"
+
+- name: Define distribution facts.
+  set_fact:
+    boot_config_dir: "{{ __boot_config_dir }}"
+    boot_overlays_dir: "{{ __boot_overlays_dir }}"
+
+- name: Include LCD type-specific vars.
+  include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ lcd_type }}.yml"
+
+- name: Validate LCD rotate
+  fail:
+    msg: "LCD rotate '{{ lcd_rotate }}' is not supported on {{ lcd_type }}"
+  when: lcd_rotate not in __lcd_calibrations.keys()
+
+- name: Define LCD type facts.
+  set_fact:
+    overlay_dtb_file: "{{ __overlay_dtb_file }}"
+    lcd_boot_config_options: "{{ __lcd_boot_config_options }}"
+    lcd_calibration: "{{ __lcd_calibrations[lcd_rotate] }}"
+    lcd_swap_axes: "{{ __lcd_swap_axes }}"
+
+- include: raspbian-facts.yml
+  when: ansible_distribution == 'Debian'
+
+# Configure LCD
+- import_tasks: configure-boot.yml
+- import_tasks: configure-x11.yml
+- import_tasks: configure-touch.yml

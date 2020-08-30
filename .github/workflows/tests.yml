@@ -1,0 +1,53 @@
+name: tests
+on: [push, pull_request]
+env:
+  ROLE_NAME: fedejaure.rpi_lcd
+jobs:
+  linting:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Linting
+        run: |
+          pip install pre-commit
+          pre-commit run --all-files
+  tests:
+    needs: linting
+    name: molecule-${{ matrix.distro }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distro:
+          - debian9
+          - debian10
+          - ubuntu1804
+          - ubuntu2004
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: "${{ env.ROLE_NAME }}"
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install system deps
+        shell: bash
+        working-directory: "./${{ env.ROLE_NAME }}"
+        run: pip install pipenv
+      - name: Install dev requirements
+        shell: bash
+        working-directory: "./${{ env.ROLE_NAME }}"
+        run: pipenv sync --dev
+      - name: Run Molecule tests.
+        working-directory: "./${{ env.ROLE_NAME }}"
+        run: pipenv run molecule test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}

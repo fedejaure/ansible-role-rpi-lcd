@@ -1,0 +1,38 @@
+---
+- name: Clean lib input conf
+  file:
+    state: absent
+    path: /etc/X11/xorg.conf.d/40-libinput.conf
+
+- name: Make sure xorg.conf.d exists
+  file:
+    state: directory
+    path: "{{ item.path }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  with_items:
+    - path: /etc/X11/xorg.conf.d
+    - path: /usr/share/X11/xorg.conf.d
+  notify:
+    - Reboot host and wait for it to restart
+
+- name: Copy calibration file
+  template:
+    src: etc/X11/xorg.conf.d/99-calibration.conf
+    dest: /etc/X11/xorg.conf.d/99-calibration.conf
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  notify:
+    - Reboot host and wait for it to restart
+
+- name: Copy xorg fbturbo file
+  copy:
+    src: usr/share/X11/xorg.conf.d/99-fbturbo.conf
+    dest: /usr/share/X11/xorg.conf.d/99-fbturbo.conf
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  notify:
+    - Reboot host and wait for it to restart

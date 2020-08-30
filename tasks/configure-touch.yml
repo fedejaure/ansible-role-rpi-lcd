@@ -1,0 +1,17 @@
+---
+- name: Make sure touch configuration is present
+  apt:
+    name: xserver-xorg-input-evdev
+    state: present
+    update_cache: yes
+
+- name: Copy evdev conf file
+  copy:
+    remote_src: yes
+    src: /usr/share/X11/xorg.conf.d/10-evdev.conf
+    dest: /usr/share/X11/xorg.conf.d/45-evdev.conf
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  notify:
+    - Reboot host and wait for it to restart

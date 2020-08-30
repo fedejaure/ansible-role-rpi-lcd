@@ -1,0 +1,59 @@
+---
+- name: Copy boot overlay DTB files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  with_items:
+    - src: "boot/overlays/{{ overlay_dtb_file }}"
+      dest: "{{ boot_overlays_dir }}"
+    - src: "boot/overlays/{{ overlay_dtb_file }}"
+      dest: "{{ boot_overlays_dir }}{{ overlay_dtb_file }}o"
+  notify:
+    - Reboot host and wait for it to restart
+
+- name: Copy fresh boot config
+  copy:
+    src: boot/config.txt
+    dest: "{{ boot_config_dir }}config.txt"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+    force: no
+
+- name: Configure boot config
+  lineinfile:
+    path: "{{ boot_config_dir }}config.txt"
+    state: present
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  with_items: "{{ lcd_boot_config_options }}"
+  notify:
+    - Reboot host and wait for it to restart
+
+- name: Copy cmdline file
+  template:
+    src: boot/cmdline.txt
+    dest: "{{ boot_config_dir }}cmdline.txt"
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  when: ansible_distribution == 'Debian'
+  notify:
+    - Reboot host and wait for it to restart
+
+- name: Copy inittab file
+  copy:
+    src: etc/inittab
+    dest: /etc/inittab
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=x
+  when: ansible_distribution == 'Debian'
+  notify:
+    - Reboot host and wait for it to restart

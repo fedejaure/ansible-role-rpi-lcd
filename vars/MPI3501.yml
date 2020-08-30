@@ -1,0 +1,22 @@
+---
+__overlay_dtb_file: tft35a-overlay.dtb
+
+__lcd_boot_config_options:
+  - regexp: ^#?hdmi_force_hotplug=
+    line: hdmi_force_hotplug=1
+  - regexp: ^#?dtparam=i2c_arm=
+    line: dtparam=i2c_arm=on
+  - regexp: ^#?dtparam=spi=
+    line: dtparam=spi=on
+  - regexp: ^#?enable_uart=
+    line: enable_uart=1
+  - regexp: ^#?dtoverlay=
+    line: "dtoverlay=tft35a:rotate={{ lcd_rotate }}"
+
+__lcd_calibrations:
+  0: 268 3880 227 3936
+  90: 3936 227 268 3880
+  180: 3880 268 3936 227
+  270: 227 3936 3880 268
+
+__lcd_swap_axes: "{{ 0 if lcd_rotate in [0, 180] else 1 }}"

@@ -1,0 +1,22 @@
+dependencies: []
+galaxy_info:
+  role_name: rpi_lcd
+  author: Federico Jaureguialzo
+  description: Raspberry Pi LCD configuration
+  license: license (MIT)
+  min_ansible_version: 2.9
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+  galaxy_tags:
+    - system
+    - arm
+    - raspberry
+    - pi
+    - lcd
