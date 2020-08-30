@@ -1,5 +1,7 @@
-Ansible Role: RPi LCD
-=====================
+Ansible Role: Raspberry Pi LCD
+==============================
+
+![tests](https://github.com/fedejaure/ansible-role-rpi-lcd/workflows/tests/badge.svg)
 
 Configures the LCD driver of Raspberry Pi.
 
@@ -42,10 +44,13 @@ Example Playbook
 ----------------
 
     - hosts: pi
-      vars_files:
-        - vars/main.yml
+
+      vars:
+        lcd_type: MPI3501
+        lcd_rotate: 90
+
       roles:
-         - { role: fedejaure.rpi_lcd }
+         - fedejaure.rpi_lcd
 
 License
 -------
