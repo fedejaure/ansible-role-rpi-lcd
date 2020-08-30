@@ -29,6 +29,11 @@
     - files:
         - "{{ lcd_type }}.yml"
 
+- name: Validate LCD rotate
+  fail:
+    msg: "LCD rotate '{{ lcd_rotate }}' is not supported on {{ lcd_type }}"
+  when: lcd_rotate not in __lcd_calibrations.keys()
+
 - name: Define LCD type facts.
   set_fact:
     overlay_dtb_file: "{{ __overlay_dtb_file }}"
