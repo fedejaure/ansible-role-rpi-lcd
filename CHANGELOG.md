@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2020-08-31
+### Changed
+- Update cache only if needed.
+
 ## [0.1.1] - 2020-08-30
 ### Fixed
 - Typos.
@@ -14,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - MPI3501 support.
 
-[Unreleased]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.1...develop
+[0.1.2]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/releases/tag/0.1.0

@@ -4,6 +4,7 @@
     name: xserver-xorg-input-evdev
     state: present
     update_cache: yes
+    cache_valid_time: 86400
 
 - name: Copy evdev conf file
   copy:
