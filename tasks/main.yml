@@ -37,6 +37,7 @@
 - name: Define LCD type facts.
   set_fact:
     overlay_dtb_file: "{{ __overlay_dtb_file }}"
+    overlay_dtbo_file: "{{ __overlay_dtbo_file }}"
     lcd_boot_config_options: "{{ __lcd_boot_config_options }}"
     lcd_calibration: "{{ __lcd_calibrations[lcd_rotate] }}"
     lcd_swap_axes: "{{ __lcd_swap_axes }}"

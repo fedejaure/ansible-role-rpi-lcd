@@ -10,7 +10,7 @@
     - src: "boot/overlays/{{ overlay_dtb_file }}"
       dest: "{{ boot_overlays_dir }}"
     - src: "boot/overlays/{{ overlay_dtb_file }}"
-      dest: "{{ boot_overlays_dir }}{{ overlay_dtb_file }}o"
+      dest: "{{ boot_overlays_dir }}{{ overlay_dtbo_file }}"
   notify:
     - Reboot host and wait for it to restart
 

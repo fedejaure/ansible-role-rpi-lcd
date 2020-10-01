@@ -1,5 +1,6 @@
 ---
 __overlay_dtb_file: tft35a-overlay.dtb
+__overlay_dtbo_file: tft35a.dtbo
 
 __lcd_boot_config_options:
   - regexp: ^#?hdmi_force_hotplug=
