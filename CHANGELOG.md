@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2020-10-01
+### Fixed
+- overlays for kernel > 5.4.51-v7l+.
+
 ## [0.1.2] - 2020-08-31
 ### Changed
 - Update cache only if needed.
