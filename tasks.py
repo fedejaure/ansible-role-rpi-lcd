@@ -73,6 +73,13 @@ def lint(c):
     """Run all linting."""
 
 
+@task()
+def tests(c):
+    # type: (Context) -> None
+    """Run ansible molecule test."""
+    _run(c, f"molecule test")
+
+
 @task(
     help={
         "part": "Part of the version to be bumped.",
