@@ -1,7 +1,7 @@
 dependencies: []
 galaxy_info:
   role_name: rpi_lcd
-  author: Federico Jaureguialzo
+  author: fedejaure
   description: Raspberry Pi LCD configuration
   license: license (MIT)
   min_ansible_version: 2.9
