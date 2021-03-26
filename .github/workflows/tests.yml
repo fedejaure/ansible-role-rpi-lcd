@@ -1,5 +1,12 @@
 name: tests
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - develop
 env:
   ROLE_NAME: fedejaure.rpi_lcd
 jobs:
@@ -7,15 +14,18 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
+
       - name: Set up Python 3.9
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v2.2.1
         with:
           python-version: 3.9
+
       - name: Linting
         run: |
           pip install pre-commit
           pre-commit run --all-files
+
   tests:
     needs: linting
     name: molecule-${{ matrix.distro }}
@@ -29,21 +39,25 @@ jobs:
           - ubuntu2004
       fail-fast: false
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
         with:
           path: "${{ env.ROLE_NAME }}"
+
       - name: Set up Python 3.9
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v2.2.1
         with:
           python-version: 3.9
+
       - name: Install system deps
         shell: bash
         working-directory: "./${{ env.ROLE_NAME }}"
         run: pip install pipenv
+
       - name: Install dev requirements
         shell: bash
         working-directory: "./${{ env.ROLE_NAME }}"
         run: pipenv sync --dev
+
       - name: Run Molecule tests.
         working-directory: "./${{ env.ROLE_NAME }}"
         run: pipenv run molecule test
