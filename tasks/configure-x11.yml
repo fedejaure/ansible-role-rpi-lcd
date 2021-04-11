@@ -19,7 +19,7 @@
 
 - name: Copy calibration file
   template:
-    src: etc/X11/xorg.conf.d/99-calibration.conf
+    src: etc/X11/xorg.conf.d/99-calibration.conf.j2
     dest: /etc/X11/xorg.conf.d/99-calibration.conf
     owner: root
     group: root
