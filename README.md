@@ -1,7 +1,13 @@
 Ansible Role: Raspberry Pi LCD
 ==============================
 
-![tests](https://github.com/fedejaure/ansible-role-rpi-lcd/workflows/tests/badge.svg)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/fedejaure/ansible-role-rpi-lcd?logo=github)](https://github.com/fedejaure/ansible-role-rpi-lcd/releases)
+[![Ansible Role](https://img.shields.io/ansible/role/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
+[![Ansible Role](https://img.shields.io/ansible/role/d/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
+[![Ansible Quality Score](https://img.shields.io/ansible/quality/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
+[![tests](https://github.com/fedejaure/ansible-role-rpi-lcd/actions/workflows/tests.yml/badge.svg)](https://github.com/fedejaure/ansible-role-rpi-lcd/actions/workflows/tests.yml)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 Configures the LCD driver of Raspberry Pi.
 
