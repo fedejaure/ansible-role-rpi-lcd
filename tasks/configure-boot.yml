@@ -38,7 +38,7 @@
 
 - name: Copy cmdline file
   template:
-    src: boot/cmdline.txt
+    src: boot/cmdline.txt.j2
     dest: "{{ boot_config_dir }}cmdline.txt"
     owner: root
     group: root
