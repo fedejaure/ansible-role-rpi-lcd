@@ -33,8 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MPI3501 support.
 
 [Unreleased]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.5...develop
-[0.1.5]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.4...v0.1.5
-[0.1.4]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.3...v0.1.4
+[0.1.5]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.4...0.1.5
+[0.1.4]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.0...0.1.1
