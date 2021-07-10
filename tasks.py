@@ -50,7 +50,7 @@ def hooks(c):
 def yamllint(c):
     # type: (Context) -> None
     """Run yamllint, a linter for YAML files."""
-    _run(c, f"yamllint -c {ROOT_DIR / '.yamllint'} {ROOT_DIR}")
+    _run(c, f"pipenv run yamllint -c {ROOT_DIR / '.yamllint'} {ROOT_DIR}")
 
 
 @task()
@@ -64,7 +64,7 @@ def ansible_lint(c):
         '--project-dir' ,
         str(ROOT_DIR)
     ]
-    _run(c, f"ansible-lint {' '.join(lint_options)} {ANSIBLE_TARGETS_STR}")
+    _run(c, f"pipenv run ansible-lint {' '.join(lint_options)} {ANSIBLE_TARGETS_STR}")
 
 
 @task(pre=[yamllint, ansible_lint])
@@ -77,7 +77,7 @@ def lint(c):
 def tests(c):
     # type: (Context) -> None
     """Run ansible molecule test."""
-    _run(c, f"molecule test")
+    _run(c, f"pipenv run molecule test")
 
 
 @task(
