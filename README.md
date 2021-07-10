@@ -1,13 +1,19 @@
 Ansible Role: Raspberry Pi LCD
 ==============================
 
+<div align="center">
+
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/fedejaure/ansible-role-rpi-lcd?logo=github)](https://github.com/fedejaure/ansible-role-rpi-lcd/releases)
 [![Ansible Role](https://img.shields.io/ansible/role/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
-[![Ansible Role](https://img.shields.io/ansible/role/d/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
-[![Ansible Quality Score](https://img.shields.io/ansible/quality/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
 [![tests](https://github.com/fedejaure/ansible-role-rpi-lcd/actions/workflows/tests.yml/badge.svg)](https://github.com/fedejaure/ansible-role-rpi-lcd/actions/workflows/tests.yml)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+
+[![Ansible Role](https://img.shields.io/ansible/role/d/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
+[![Ansible Quality Score](https://img.shields.io/ansible/quality/50495)](https://galaxy.ansible.com/fedejaure/rpi_lcd)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)
+
+</div>
 
 Configures the LCD driver of Raspberry Pi.
 
