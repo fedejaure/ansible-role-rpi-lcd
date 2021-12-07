@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "856b1a3cc915fff747c3c06470f2d429d759cf1df76f7d62174583c02b0b8869"
+            "sha256": "cdd20d042ded6fa17ab3c2d28f25cb7151a8e4ddbe3b60632b1c73a0935398f1"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -16,17 +16,17 @@
     "default": {
         "ansible": {
             "hashes": [
-                "sha256:0b7c52ec51e326941aa1af5affd9bfed9c1bfc61619c1c4210dce1665a4c4b29"
+                "sha256:b47cc704bbb69fb387bdaa24a1cb0c5ef0a4253763fd3315ef93ba6ae3a5c376"
             ],
             "index": "pypi",
-            "version": "==4.7.0"
+            "version": "==5.0.1"
         },
         "ansible-core": {
             "hashes": [
-                "sha256:b87188beacfac1bb6dc5cf65663f3c52e66e0f9990742db00a3dca71ebae2eee"
+                "sha256:a4508707262be11bb4dd98a006f1b14817879a055e6b6c46ad9fca8894fb3073"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
-            "version": "==2.11.7"
+            "markers": "python_version >= '3.8'",
+            "version": "==2.12.1"
         },
         "cffi": {
             "hashes": [
@@ -863,7 +863,7 @@
                 "sha256:1dded089b79dd042b3ab5cd63439a338e16652001f0c16e73acdcf4997ad772d",
                 "sha256:43b2c6ad51f46f6c94992aee546f1c177719f4e05aff8f5ea4d2efae3ebdac89"
             ],
-            "markers": "python_full_version >= '3.6.2' and python_full_version < '4.0.0'",
+            "markers": "python_version < '4' and python_full_version >= '3.6.2'",
             "version": "==10.15.2"
         },
         "ruamel.yaml": {
@@ -945,7 +945,7 @@
                 "sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece",
                 "sha256:c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_full_version < '4.0.0'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "version": "==1.26.7"
         },
         "virtualenv": {
