@@ -1,11 +1,11 @@
 ---
 - name: Clean lib input conf
-  file:
+  ansible.builtin.file:
     state: absent
     path: /etc/X11/xorg.conf.d/40-libinput.conf
 
 - name: Make sure xorg.conf.d exists
-  file:
+  ansible.builtin.file:
     state: directory
     path: "{{ item.path }}"
     owner: root
@@ -18,7 +18,7 @@
     - Reboot host and wait for it to restart
 
 - name: Copy calibration file
-  template:
+  ansible.builtin.template:
     src: etc/X11/xorg.conf.d/99-calibration.conf.j2
     dest: /etc/X11/xorg.conf.d/99-calibration.conf
     owner: root
@@ -28,7 +28,7 @@
     - Reboot host and wait for it to restart
 
 - name: Copy xorg fbturbo file
-  copy:
+  ansible.builtin.copy:
     src: usr/share/X11/xorg.conf.d/99-fbturbo.conf
     dest: /usr/share/X11/xorg.conf.d/99-fbturbo.conf
     owner: root

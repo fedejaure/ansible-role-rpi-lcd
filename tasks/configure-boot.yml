@@ -1,6 +1,6 @@
 ---
 - name: Copy boot overlay DTB files
-  copy:
+  ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     owner: root
@@ -15,7 +15,7 @@
     - Reboot host and wait for it to restart
 
 - name: Copy fresh boot config
-  copy:
+  ansible.builtin.copy:
     src: boot/config.txt
     dest: "{{ boot_config_dir }}config.txt"
     owner: root
@@ -24,7 +24,7 @@
     force: no
 
 - name: Configure boot config
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: "{{ boot_config_dir }}config.txt"
     state: present
     owner: root
@@ -37,7 +37,7 @@
     - Reboot host and wait for it to restart
 
 - name: Copy cmdline file
-  template:
+  ansible.builtin.template:
     src: boot/cmdline.txt.j2
     dest: "{{ boot_config_dir }}cmdline.txt"
     owner: root
@@ -48,7 +48,7 @@
     - Reboot host and wait for it to restart
 
 - name: Copy inittab file
-  copy:
+  ansible.builtin.copy:
     src: etc/inittab
     dest: /etc/inittab
     owner: root
