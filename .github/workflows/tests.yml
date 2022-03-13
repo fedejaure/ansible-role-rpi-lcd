@@ -14,10 +14,10 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.4.0
 
       - name: Set up Python 3.9
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.9
 
@@ -39,12 +39,12 @@ jobs:
           - ubuntu2004
       fail-fast: false
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.4.0
         with:
           path: "${{ env.ROLE_NAME }}"
 
       - name: Set up Python 3.9
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.9
 
