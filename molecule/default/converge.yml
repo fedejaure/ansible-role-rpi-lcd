@@ -6,5 +6,5 @@
     lcd_rotate: 270
   tasks:
     - name: "Include rpi_lcd"
-      include_role:
+      ansible.builtin.include_role:
         name: fedejaure.rpi_lcd
