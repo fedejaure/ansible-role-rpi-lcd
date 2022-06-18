@@ -13,3 +13,6 @@ molecule = {extras = ["docker", "lint"],version = "~=3.6.1"}
 
 [packages]
 ansible = "~=5.9.0"
+
+[requires]
+python_version = ">=3.8"
