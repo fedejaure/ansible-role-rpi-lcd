@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.9] - 2022-06-18
+### Changed
+- updated deps.
+
+### Fixed
+- use FQCN for builtin actions.
+
 ## [0.1.8] - 2022-03-13
 ### Fixed
 - deprection warnings.
@@ -42,7 +49,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - MPI3501 support.
 
-[Unreleased]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.8...develop
+[Unreleased]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.9...develop
+[0.1.9]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.5...0.1.6
