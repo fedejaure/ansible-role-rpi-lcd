@@ -12,4 +12,4 @@ ansible-lint = "~=6.0.2"
 molecule = {extras = ["docker", "lint"],version = "~=3.6.1"}
 
 [packages]
-ansible = "~=5.7.0"
+ansible = "~=5.9.0"
