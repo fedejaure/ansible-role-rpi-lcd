@@ -11,7 +11,7 @@ repository = "https://github.com/fedejaure/ansible-role-rpi-lcd"
 "Bug Tracker" = "https://github.com/fedejaure/ansible-role-rpi-lcd/issues"
 
 [tool.poetry.dependencies]
-python = "<3.12,>=3.10"
+python = "<3.12,>=3.11"
 ansible = "^7.2.0"
 
 [tool.poetry.group.dev.dependencies]
@@ -30,7 +30,7 @@ mypy = "^0.991"
 yamllint = "^1.29.0"
 ansible-lint = {version = "^6.14.0", markers = "platform_system != 'Windows'"}
 
-[tool.poetry.group.flake8.dependencies]
+[tool.poetry.group.flakeheaven.dependencies]
 flake8 = "^4.0.1"
 flakeheaven = "^3.2.1"
 flake8-builtins = "^2.1.0"

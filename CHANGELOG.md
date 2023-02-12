@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - updated deps.
+- pipenv by poetry as develoment deps manager.
 
 ### Removed
 - molecule lint step.

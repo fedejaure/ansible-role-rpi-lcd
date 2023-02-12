@@ -16,15 +16,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Python 3.9
+      - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: 3.11
+
+      - name: Install system deps
+        shell: bash
+        run: |
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install --no-root --only dev --only flakeheaven --sync
 
       - name: Linting
-        run: |
-          pip install pre-commit
-          pre-commit run --all-files
+        shell: bash
+        run: poetry run inv hooks
 
   tests:
     needs: linting
@@ -43,10 +49,10 @@ jobs:
         with:
           path: "${{ env.ROLE_NAME }}"
 
-      - name: Set up Python 3.9
+      - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: 3.11
 
       - name: Install system deps
         working-directory: "./${{ env.ROLE_NAME }}"
@@ -57,6 +63,7 @@ jobs:
           poetry install --no-root
 
       - name: Install playbooks requirements
+        working-directory: "./${{ env.ROLE_NAME }}"
         shell: bash
         run: poetry run inv galaxy-install
 
@@ -67,7 +74,7 @@ jobs:
 
       - name: Run Molecule tests
         working-directory: "./${{ env.ROLE_NAME }}"
-        run: poetry run inv tests --target ${{ matrix.target }}
+        run: poetry run inv tests
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
