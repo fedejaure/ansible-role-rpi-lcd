@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - updated deps.
 
+### Removed
+- molecule lint step.
+
 ## [0.1.9] - 2022-06-18
 ### Changed
 - updated deps.
