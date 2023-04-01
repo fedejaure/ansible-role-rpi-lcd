@@ -27,7 +27,7 @@ isort = "^5.12.0"
 black = "^22.12"
 safety = "^2.4.0b1"
 mypy = "^0.991"
-yamllint = "^1.29.0"
+yamllint = "^1.30.0"
 ansible-lint = {version = "^6.14.3", markers = "platform_system != 'Windows'"}
 
 [tool.poetry.group.flakeheaven.dependencies]
