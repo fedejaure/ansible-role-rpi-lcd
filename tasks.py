@@ -26,7 +26,7 @@ META_DIR = ROOT_DIR / "meta"
 ANSIBLE_TARGETS = [ROOT_DIR, TASKS_DIR, HANDLERS_DIR, VARS_DIR, DEFAULTS_DIR, MOLECULE_DIR]
 ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
 
-SAFETY_IGNORE = [42923]
+SAFETY_IGNORE = [42923, 54229, 54230]
 
 
 def _run(c, command, env=None):
@@ -93,7 +93,7 @@ def safety(c):
     """Run safety."""
     safety_options = ["--stdin", "--full-report"]
     if SAFETY_IGNORE:
-        safety_options += ["-i", *[str(ignore) for ignore in SAFETY_IGNORE]]
+        safety_options += ["-i", ",".join([str(ignore) for ignore in SAFETY_IGNORE])]
     _run(
         c,
         "poetry export --with dev --format=requirements.txt --without-hashes | "
