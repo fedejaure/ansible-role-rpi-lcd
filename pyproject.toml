@@ -41,7 +41,7 @@ flake8-annotations = "^2.9.1"
 flake8-docstrings = "^1.7.0"
 flake8-bandit = "^3.0.0"
 darglint = "^1.8.1"
-pylint = "^2.17.2"
+pylint = "^2.17.3"
 
 [tool.flakeheaven]
 format = "grouped"
