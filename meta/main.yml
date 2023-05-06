@@ -10,9 +10,11 @@ galaxy_info:
     - name: Debian
       versions:
         - buster
+        - bullseye
     - name: Ubuntu
       versions:
         - focal
+        - jammy
   galaxy_tags:
     - system
     - arm
