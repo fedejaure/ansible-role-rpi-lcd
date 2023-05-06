@@ -9,11 +9,9 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - stretch
         - buster
     - name: Ubuntu
       versions:
-        - bionic
         - focal
   galaxy_tags:
     - system
