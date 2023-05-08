@@ -33,7 +33,7 @@ ansible-lint = {version = "^6.15.0", markers = "platform_system != 'Windows'"}
 
 [tool.poetry.group.flakeheaven.dependencies]
 flake8 = "^4.0.1"
-flakeheaven = "^3.2.1"
+flakeheaven = "^3.3.0"
 flake8-builtins = "^2.1.0"
 flake8-blind-except = "^0.2.1"
 flake8-logging-format = "^0.9.0"
