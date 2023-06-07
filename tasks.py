@@ -29,14 +29,12 @@ ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
 SAFETY_IGNORE = [42923, 54229, 54230]
 
 
-def _run(c, command, env=None):
-    # type: (Context, str, Optional[Dict]) -> Result
+def _run(c: Context, command: str, env: Optional[Dict] = None) -> Optional[Result]:
     return c.run(command, pty=platform.system() != "Windows", env=env)
 
 
 @task()
-def clean_python(c):
-    # type: (Context) -> None
+def clean_python(c: Context) -> None:
     """Clean up python file artifacts."""
     _run(c, "find . -name '*.pyc' -exec rm -f {} +")
     _run(c, "find . -name '*.pyo' -exec rm -f {} +")
@@ -45,15 +43,13 @@ def clean_python(c):
 
 
 @task()
-def install_hooks(c):
-    # type: (Context) -> None
+def install_hooks(c: Context) -> None:
     """Install pre-commit hooks."""
     _run(c, "poetry run pre-commit install")
 
 
 @task()
-def hooks(c):
-    # type: (Context) -> None
+def hooks(c: Context) -> None:
     """Run pre-commit hooks."""
     _run(c, "poetry run pre-commit run --all-files")
 
@@ -63,16 +59,14 @@ def hooks(c):
         "force": "Force overwriting an existing role or collection. (default: False)",
     }
 )
-def galaxy_install(c, force=False):
-    # type: (Context, bool) -> None
+def galaxy_install(c: Context, force: bool = False) -> None:
     """Install ansible-galaxy requirements."""
     install_options = ["--force"] if force else []
     _run(c, f"poetry run ansible-galaxy install -r requirements.yml {' '.join(install_options)}")
 
 
 @task(name="format", help={"check": "Checks if source is formatted without applying changes"})
-def format_(c, check=False):
-    # type: (Context, bool) -> None
+def format_(c: Context, check: bool = False) -> None:
     """Format code."""
     isort_options = ["--check-only", "--diff"] if check else []
     _run(c, f"poetry run isort {' '.join(isort_options)} {PYTHON_TARGETS_STR}")
@@ -81,15 +75,13 @@ def format_(c, check=False):
 
 
 @task()
-def flake8(c):
-    # type: (Context) -> None
+def flake8(c: Context) -> None:
     """Run flake8."""
     _run(c, f"poetry run flakeheaven lint {PYTHON_TARGETS_STR}")
 
 
 @task()
-def safety(c):
-    # type: (Context) -> None
+def safety(c: Context) -> None:
     """Run safety."""
     safety_options = ["--stdin", "--full-report"]
     if SAFETY_IGNORE:
@@ -102,15 +94,13 @@ def safety(c):
 
 
 @task()
-def yamllint(c):
-    # type: (Context) -> None
+def yamllint(c: Context) -> None:
     """Run yamllint, a linter for YAML files."""
     _run(c, f"poetry run yamllint -c {ROOT_DIR / '.yamllint'} {ROOT_DIR}")
 
 
 @task(help={"fix": "Allow ansible-lint to reformat YAML files and run rule transforms"})
-def ansible_lint(c, fix=False):
-    # type: (Context, bool) -> None
+def ansible_lint(c: Context, fix: bool = False) -> None:
     """Run ansible linter."""
     lint_options = ["--force-color", "-p", "-v", "--project-dir", str(ROOT_DIR)]
     if fix:
@@ -119,21 +109,18 @@ def ansible_lint(c, fix=False):
 
 
 @task(pre=[flake8, safety, call(format_, check=True), yamllint, ansible_lint])
-def lint(c):
-    # type: (Context) -> None
+def lint(c: Context) -> None:
     """Run all linting."""
 
 
 @task()
-def mypy(c):
-    # type: (Context) -> None
+def mypy(c: Context) -> None:
     """Run mypy."""
     _run(c, f"poetry run mypy {PYTHON_TARGETS_STR}")
 
 
 @task(help={"target": "Name of the scenario to target."})
-def tests(c, target="default"):
-    # type: (Context, str) -> None
+def tests(c: Context, target: str = "default") -> None:
     """Run ansible molecule test."""
     molecule_options = ["-s", target]
     _run(c, f"poetry run molecule test {' '.join(molecule_options)}")
@@ -145,8 +132,7 @@ def tests(c, target="default"):
         "dry_run": "Don't write any files, just pretend. (default: False)",
     }
 )
-def version(c, part, dry_run=False):
-    # type: (Context, str, bool) -> None
+def version(c: Context, part: str, dry_run: bool = False) -> None:
     """Bump version."""
     bump_options = ["--dry-run"] if dry_run else []
     _run(c, f"poetry run bump2version {' '.join(bump_options)} {part}")
