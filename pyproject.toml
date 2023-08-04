@@ -29,7 +29,7 @@ black = "^23.7"
 safety = "^2.4.0b1"
 mypy = "^1.4"
 yamllint = "^1.32.0"
-ansible-lint = {version = "^6.16.2", markers = "platform_system != 'Windows'"}
+ansible-lint = {version = "^6.17.2", markers = "platform_system != 'Windows'"}
 
 [tool.poetry.group.flakeheaven.dependencies]
 flake8 = "^4.0.1"
