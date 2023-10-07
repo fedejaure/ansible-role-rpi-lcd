@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rpi-lcd"
-version = "0.1.9"
+version = "0.2.0"
 description = "Ansible Role - Raspberry Pi LCD."
 authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 readme = "README.md"
