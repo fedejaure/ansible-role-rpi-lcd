@@ -15,7 +15,7 @@ python = "<3.12,>=3.11"
 ansible = "^8.4.0"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.4.0"
+pre-commit = "^3.5.0"
 invoke = "^2.2.0"
 bump2version = "^1.0.1"
 
