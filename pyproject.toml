@@ -26,7 +26,7 @@ molecule-plugins = {extras = ["docker"], version = "^23.5.0"}
 [tool.poetry.group.linters.dependencies]
 isort = "^5.12.0"
 black = "^23.11"
-safety = "^2.4.0b1"
+safety = "^2.4.0b2"
 mypy = "^1.7"
 yamllint = "^1.32.0"
 ansible-lint = {version = "^6.21.1", markers = "platform_system != 'Windows'"}
