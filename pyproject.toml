@@ -12,7 +12,7 @@ repository = "https://github.com/fedejaure/ansible-role-rpi-lcd"
 
 [tool.poetry.dependencies]
 python = "<3.12,>=3.11"
-ansible = "^9.1.0"
+ansible = "^9.2.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.0"
