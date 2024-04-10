@@ -1995,13 +1995,13 @@ test = ["websockets"]
 
 [[package]]
 name = "yamllint"
-version = "1.33.0"
+version = "1.35.1"
 description = "A linter for YAML files."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yamllint-1.33.0-py3-none-any.whl", hash = "sha256:28a19f5d68d28d8fec538a1db21bb2d84c7dc2e2ea36266da8d4d1c5a683814d"},
-    {file = "yamllint-1.33.0.tar.gz", hash = "sha256:2dceab9ef2d99518a2fcf4ffc964d44250ac4459be1ba3ca315118e4a1a81f7d"},
+    {file = "yamllint-1.35.1-py3-none-any.whl", hash = "sha256:2e16e504bb129ff515b37823b472750b36b6de07963bd74b307341ef5ad8bdc3"},
+    {file = "yamllint-1.35.1.tar.gz", hash = "sha256:7a003809f88324fd2c877734f2d575ee7881dd9043360657cc8049c809eba6cd"},
 ]
 
 [package.dependencies]
@@ -2014,4 +2014,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.12,>=3.11"
-content-hash = "953b05ad92a9888805ba1d3be57a563a0d90f9069f859dcdca951dc4a26650cd"
+content-hash = "abfef3ff9eaffe4cf448db4b06d64b5cf9e43084e10ad4359523eba35196f298"
