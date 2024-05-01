@@ -17,7 +17,7 @@ repos:
     hooks:
       - id: isort
   - repo: https://github.com/psf/black
-    rev: 24.3.0
+    rev: 24.4.2
     hooks:
       - id: black
   - repo: local
@@ -35,7 +35,7 @@ repos:
     hooks:
       - id: yamllint
   - repo: https://github.com/ansible-community/ansible-lint.git
-    rev: v24.2.2
+    rev: v24.2.3
     hooks:
       - id: ansible-lint
         files: \.(yaml|yml)$
