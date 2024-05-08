@@ -27,7 +27,7 @@ molecule-plugins = {extras = ["docker"], version = "^23.5.3"}
 isort = "^5.13.2"
 black = "^24.4"
 safety = "^3.1.0"
-mypy = "^1.9"
+mypy = "^1.10"
 yamllint = "^1.35.1"
 ansible-lint = {version = "^6.21.1", markers = "platform_system != 'Windows'"}
 
