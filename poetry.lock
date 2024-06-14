@@ -2,13 +2,13 @@
 
 [[package]]
 name = "ansible"
-version = "10.0.0"
+version = "10.0.1"
 description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "ansible-10.0.0-py3-none-any.whl", hash = "sha256:6a3a1e819468ffb62040766495756e3d1706b210f22f6dbd29eccd378de7f219"},
-    {file = "ansible-10.0.0.tar.gz", hash = "sha256:6257efa3b4989f99cf85a4f51fdf941f52e0c40b29aa3677ff07f0a3cf34b0f1"},
+    {file = "ansible-10.0.1-py3-none-any.whl", hash = "sha256:3134f502173fff84f323e988ded2dc1b0bebdf08d4a9f74d582c4faea00ef03b"},
+    {file = "ansible-10.0.1.tar.gz", hash = "sha256:b2ab79d54883837f3c5b9b95fd779dff76e5fc5d9ef8555c969575ed24f9f2e1"},
 ]
 
 [package.dependencies]
@@ -2015,4 +2015,4 @@ dev = ["doc8", "flake8", "flake8-import-order", "rstcheck[sphinx]", "sphinx"]
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.12,>=3.11"
-content-hash = "15b4ccad18f416c9281c4467ec9386312b20b21952c471180cb1c87928adbf5c"
+content-hash = "50fb518ee0eb275d19d663a3d22a8222d9731ef0f60e3970095ef3b4fcad1a04"
