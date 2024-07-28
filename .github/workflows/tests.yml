@@ -67,10 +67,10 @@ jobs:
         shell: bash
         run: poetry run inv galaxy-install
 
-      - name: Run safety check
+      - name: Run security check
         working-directory: "./${{ env.ROLE_NAME }}"
         shell: bash
-        run: poetry run inv safety
+        run: poetry run inv security
 
       - name: Run Molecule tests
         working-directory: "./${{ env.ROLE_NAME }}"

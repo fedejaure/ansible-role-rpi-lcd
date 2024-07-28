@@ -27,8 +27,6 @@ META_DIR = ROOT_DIR / "meta"
 ANSIBLE_TARGETS = [ROOT_DIR, TASKS_DIR, HANDLERS_DIR, VARS_DIR, DEFAULTS_DIR, MOLECULE_DIR]
 ANSIBLE_TARGETS_STR = " ".join([str(t) for t in ANSIBLE_TARGETS])
 
-SAFETY_IGNORE = [70612]
-
 
 def _run(c: Context, command: str, env: Optional[Dict] = None) -> Optional[Result]:
     return c.run(command, pty=platform.system() != "Windows", env=env)
@@ -82,15 +80,12 @@ def flake8(c: Context) -> None:
 
 
 @task()
-def safety(c: Context) -> None:
-    """Run safety."""
-    safety_options = ["--stdin", "--full-report"]
-    if SAFETY_IGNORE:
-        safety_options += ["-i", ",".join([str(ignore) for ignore in SAFETY_IGNORE])]
+def security(c: Context) -> None:
+    """Run security related checks."""
     _run(
         c,
         "poetry export --with dev --format=requirements.txt --without-hashes | "
-        f"poetry run safety check {' '.join(safety_options)}",
+        "poetry run safety check --stdin --full-report",
     )
 
 
@@ -109,7 +104,7 @@ def ansible_lint(c: Context, fix: bool = False) -> None:
     _run(c, f"poetry run ansible-lint {' '.join(lint_options)} {ANSIBLE_TARGETS_STR}")
 
 
-@task(pre=[flake8, safety, call(format_, check=True), yamllint, ansible_lint])
+@task(pre=[flake8, security, call(format_, check=True), yamllint, ansible_lint])
 def lint(c: Context) -> None:
     """Run all linting."""
 
