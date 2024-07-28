@@ -82,8 +82,8 @@ def flake8(c: Context) -> None:
 
 
 @task()
-def safety(c: Context) -> None:
-    """Run safety."""
+def security(c: Context) -> None:
+    """Run security related checks."""
     safety_options = ["--stdin", "--full-report"]
     if SAFETY_IGNORE:
         safety_options += ["-i", ",".join([str(ignore) for ignore in SAFETY_IGNORE])]
@@ -109,7 +109,7 @@ def ansible_lint(c: Context, fix: bool = False) -> None:
     _run(c, f"poetry run ansible-lint {' '.join(lint_options)} {ANSIBLE_TARGETS_STR}")
 
 
-@task(pre=[flake8, safety, call(format_, check=True), yamllint, ansible_lint])
+@task(pre=[flake8, security, call(format_, check=True), yamllint, ansible_lint])
 def lint(c: Context) -> None:
     """Run all linting."""
 
