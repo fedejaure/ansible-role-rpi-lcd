@@ -1072,13 +1072,13 @@ files = [
 
 [[package]]
 name = "molecule"
-version = "24.7.0"
+version = "24.8.0"
 description = "Molecule aids in the development and testing of Ansible roles"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "molecule-24.7.0-py3-none-any.whl", hash = "sha256:d204a615a3951abaec8fe34e6e50150721d9fd07ea48631dddb5774cb27b55dd"},
-    {file = "molecule-24.7.0.tar.gz", hash = "sha256:db2c7fa59923e9bf23d61a92a5b19d6881ec9ee5fe96ed9e9e9d700b02723f03"},
+    {file = "molecule-24.8.0-py3-none-any.whl", hash = "sha256:8e748ec0cf18e7ef718af2caf18e3ef77dff54f5be1ecee9ffaa93095f301cf5"},
+    {file = "molecule-24.8.0.tar.gz", hash = "sha256:140738904e9f17815780568ac408c9f73bb9e2ac721e34685a359e6d3507e677"},
 ]
 
 [package.dependencies]
@@ -2078,4 +2078,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.12,>=3.11"
-content-hash = "cab8724cddd4ab2c2bf25bde41e79404f53ab52e586c0e527b4e81769de507a7"
+content-hash = "c0f6c898c6155c178d1816ccb5ca6503e6b74c7cee1df65958adeb4e1558f3d7"
