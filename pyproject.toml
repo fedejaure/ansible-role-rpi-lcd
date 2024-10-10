@@ -6,6 +6,7 @@ authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/fedejaure/ansible-role-rpi-lcd"
 repository = "https://github.com/fedejaure/ansible-role-rpi-lcd"
+package-mode = false
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/fedejaure/ansible-role-rpi-lcd/issues"
