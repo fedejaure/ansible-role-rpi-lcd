@@ -6,12 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Debian `Bullseye` support.
-- Ubuntu `Jammy Jellyfish` support.
+- Debian `Bullseye` and `Bookworm` support.
+- Ubuntu `Jammy Jellyfish` and `Noble Numbat` support.
 
 ### Removed
-- Debian `Stretch` support.
-- Ubuntu `Bionic Beaver` support.
+- Debian `Stretch` and `buster` support.
+- Ubuntu `Bionic Beaver` and `Focal Fossa` support.
 
 ## [0.2.0] - 2023-04-10
 ### Changed
