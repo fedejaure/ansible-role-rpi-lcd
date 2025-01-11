@@ -39,10 +39,10 @@ jobs:
     strategy:
       matrix:
         distro:
-          - debian10
           - debian11
-          - ubuntu2004
+          - debian12
           - ubuntu2204
+          - ubuntu2404
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
