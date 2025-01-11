@@ -28,47 +28,60 @@ invoke = "^2.2.0"
 bump2version = "^1.0.1"
 
 [tool.poetry.group.test.dependencies]
-molecule = "^24.9.0"
-molecule-plugins = {extras = ["docker"], version = "^23.6.0"}
+molecule = "^24.12.0"
+molecule-plugins = {extras = ["docker"], version = "^23.5.3"}
 
-[tool.poetry.group.linters.dependencies]
+[tool.poetry.group.lint.dependencies]
 isort = "^5.13.2"
 black = "^24.10"
-safety = "^3.2.10"
-mypy = "^1.13"
+ruff = "^0.8.6"
 yamllint = "^1.35.1"
 ansible-lint = {version = "^24.7.0", markers = "platform_system != 'Windows'"}
 
-[tool.poetry.group.flakeheaven.dependencies]
-flake8 = "^4.0.1"
-flakeheaven = "^3.3.0"
-flake8-builtins = "^2.5.0"
-flake8-blind-except = "^0.2.1"
-flake8-logging-format = "^2024.24.12"
-flake8-bugbear = "^23.3.12"
-flake8-annotations = "^2.9.1"
-flake8-docstrings = "^1.7.0"
-flake8-bandit = "^3.0.0"
-darglint = "^1.8.1"
-pylint = "^3.3.3"
+[tool.poetry.group.security.dependencies]
+safety = "^3.2.14"
 
-[tool.flakeheaven]
-format = "grouped"
-max_line_length = 99
-show_source = true
-docstring-convention = "google"
-extended_default_ignore = []
+[tool.poetry.group.typing.dependencies]
+mypy = "^1.14.1"
 
-[tool.flakeheaven.plugins]
-pyflakes = ["+*"]
-pycodestyle = ["+*"]
-mccabe = ["+*"]
-flake8-docstrings = ["+*", "-D212"]
-"flake8-*" = ["+*"]
-pylint = ["-C????", "-E????", "+F????", "+I????", "-R????", "-W????"]
+[tool.ruff]
+target-version = "py311"
+output-format = "full"
+line-length = 99
+fix = true
+extend-exclude = [
+    "docs/*",
+]
 
-[tool.flakehell.exceptions."tests/"]
-flake8-bandit = ["-S101"]
+[tool.ruff.lint]
+select = [
+  "E", "F", "W",  # flake8
+  "C",  # mccabe
+  "I",  # isort
+  "N",  # pep8-naming
+  "D",  # flake8-docstrings
+  "ANN",  # flake8-annotations
+  "S",  # flake8-bandit
+  "BLE",  # flake8-blind-except
+  "B",  # flake8-bugbear
+  "A",  # flake8-builtins
+  "G",  # flake8-logging-format
+  "ERA",  # eradicate
+  "ISC",  # flake8-implicit-str-concat
+  "RUF",  # Ruff-specific rules
+]
+ignore = ["ANN101", "D203", "D213"]
+unfixable = [
+  "ERA",  # Don't remove commented-out code
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+".jupyter/jupyter_lab_config.py" = ["E501", "ERA001"]
+"src/deeptune/utils.py" = ["ANN401"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
 
 [tool.isort]
 multi_line_output = 3
@@ -80,7 +93,7 @@ known_third_party = ["invoke", "nox"]
 
 [tool.black]
 line-length = 99
-target-version = ["py37"]
+target-version = ["py311"]
 
 [tool.mypy]
 warn_return_any = true
