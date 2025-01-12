@@ -1,4 +1,8 @@
 ---
+default_install_hook_types:
+  - pre-commit
+  - post-checkout
+  - post-merge
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -20,16 +24,10 @@ repos:
     rev: 24.10.0
     hooks:
       - id: black
-  - repo: local
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.1
     hooks:
-      - id: flakeheaven
-        name: flakeheaven
-        description: "`FlakeHeaven` it's a Flake8 wrapper to make it cools."
-        entry: poetry run flakeheaven
-        args: [lint]
-        language: system
-        types: [python]
-        require_serial: true
+      - id: ruff
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.35.1
     hooks:
@@ -39,3 +37,8 @@ repos:
     hooks:
       - id: ansible-lint
         files: \.(yaml|yml)$
+  - repo: https://github.com/python-poetry/poetry
+    rev: 2.0.0
+    hooks:
+      - id: poetry-check
+      - id: poetry-install

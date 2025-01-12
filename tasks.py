@@ -1,5 +1,4 @@
-"""
-Tasks for maintaining the project.
+"""Tasks for maintaining the project.
 
 Execute 'invoke --list' for guidance on using Invoke
 """
@@ -74,9 +73,9 @@ def format_(c: Context, check: bool = False) -> None:
 
 
 @task()
-def flake8(c: Context) -> None:
-    """Run flake8."""
-    _run(c, f"poetry run flakeheaven lint {PYTHON_TARGETS_STR}")
+def ruff(c: Context) -> None:
+    """Run ruff."""
+    _run(c, f"poetry run ruff check {PYTHON_TARGETS_STR}")
 
 
 @task()
@@ -104,7 +103,7 @@ def ansible_lint(c: Context, fix: bool = False) -> None:
     _run(c, f"poetry run ansible-lint {' '.join(lint_options)} {ANSIBLE_TARGETS_STR}")
 
 
-@task(pre=[flake8, security, call(format_, check=True), yamllint, ansible_lint])
+@task(pre=[ruff, security, call(format_, check=True), yamllint, ansible_lint])
 def lint(c: Context) -> None:
     """Run all linting."""
 
