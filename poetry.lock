@@ -7,7 +7,7 @@ description = "Reusable constraint types to use with typing.Annotated"
 optional = false
 python-versions = ">=3.8"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"},
     {file = "annotated_types-0.7.0.tar.gz", hash = "sha256:aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"},
@@ -20,7 +20,7 @@ description = "Radically simple IT automation"
 optional = false
 python-versions = ">=3.11"
 groups = ["main"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "ansible-11.1.0-py3-none-any.whl", hash = "sha256:bbaf7073993f019fc0293fc8b76c7b215081831957c28eb020f12c270a16e8f0"},
     {file = "ansible-11.1.0.tar.gz", hash = "sha256:d01b425990d960d2a33fc378e1b73dbca1c0e28bc22f4056ab6b3c8e9ae74fba"},
@@ -40,7 +40,7 @@ files = [
     {file = "ansible_compat-24.6.1-py3-none-any.whl", hash = "sha256:1e1695454ea759b24beab7dfbeac18964553edca4a4ad0584567aa3eef491f0e"},
     {file = "ansible_compat-24.6.1.tar.gz", hash = "sha256:f93d4c347d8e1903c292449441c09a987d70366f9cadf9afe5e32dc8a0193cac"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 ansible-core = ">=2.14"
@@ -64,7 +64,7 @@ files = [
     {file = "ansible_core-2.18.1-py3-none-any.whl", hash = "sha256:4a312e416e09c7271188d6b8e2b1062fc6834fefd6a1814d0e02fb8aadb3e1ba"},
     {file = "ansible_core-2.18.1.tar.gz", hash = "sha256:14cac1f92bbdae881cb0616eddeb17925e8cb507e486087975e724533d9de74f"},
 ]
-markers = {main = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {main = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 cryptography = "*"
@@ -80,7 +80,7 @@ description = "Checks playbooks for practices and behavior that could potentiall
 optional = false
 python-versions = ">=3.10"
 groups = ["lint"]
-markers = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\""
+markers = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\""
 files = [
     {file = "ansible_lint-24.7.0-py3-none-any.whl", hash = "sha256:a2305f1d69a25be27810c64a32711d1d0463d2fda5b9308166362347aeda36e0"},
     {file = "ansible_lint-24.7.0.tar.gz", hash = "sha256:ca2edc7e4e80cf19df4b28cbf4c118f761ce6cdd6a5ef9c8561e454ed7af5a24"},
@@ -117,7 +117,7 @@ files = [
     {file = "attrs-23.1.0-py3-none-any.whl", hash = "sha256:1f28b4522cdc2fb4256ac1a020c78acf9cba2c6b461ccd2c126f3aa8e8335d04"},
     {file = "attrs-23.1.0.tar.gz", hash = "sha256:6279836d581513a26f1bf235f9acd333bc9115683f14f7e8fae46c98fc50e015"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.extras]
 cov = ["attrs[tests]", "coverage[toml] (>=5.3)"]
@@ -133,7 +133,7 @@ description = "The ultimate Python library in building OAuth and OpenID Connect 
 optional = false
 python-versions = ">=3.8"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "Authlib-1.3.0-py2.py3-none-any.whl", hash = "sha256:9637e4de1fb498310a56900b3e2043a206b03cb11c05422014b0302cbc814be3"},
     {file = "Authlib-1.3.0.tar.gz", hash = "sha256:959ea62a5b7b5123c5059758296122b57cd2585ae2ed1c0622c21b371ffdae06"},
@@ -149,7 +149,7 @@ description = "The uncompromising code formatter."
 optional = false
 python-versions = ">=3.9"
 groups = ["lint"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "black-24.10.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:e6668650ea4b685440857138e5fe40cde4d652633b1bdffc62933d0db4ed9812"},
     {file = "black-24.10.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:1c536fcf674217e87b8cc3657b81809d3c085d7bf3ef262ead700da345bfa6ea"},
@@ -199,7 +199,7 @@ files = [
     {file = "bracex-2.4-py3-none-any.whl", hash = "sha256:efdc71eff95eaff5e0f8cfebe7d01adf2c8637c8c92edaf63ef348c241a82418"},
     {file = "bracex-2.4.tar.gz", hash = "sha256:a27eaf1df42cf561fed58b7a8f3fdf129d1ea16a81e1fadd1d17989bc6384beb"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [[package]]
 name = "bump2version"
@@ -208,7 +208,7 @@ description = "Version-bump your software with a single command!"
 optional = false
 python-versions = ">=3.5"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "bump2version-1.0.1-py2.py3-none-any.whl", hash = "sha256:37f927ea17cde7ae2d7baf832f8e80ce3777624554a653006c9144f8017fe410"},
     {file = "bump2version-1.0.1.tar.gz", hash = "sha256:762cb2bfad61f4ec8e2bdf452c7c267416f8c70dd9ecb1653fd0bbb01fa936e6"},
@@ -221,7 +221,7 @@ description = "Python package for providing Mozilla's CA Bundle."
 optional = false
 python-versions = ">=3.6"
 groups = ["security", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "certifi-2023.7.22-py3-none-any.whl", hash = "sha256:92d6037539857d8206b8f6ae472e8b77db8058fec5937a1ef3f54304089edbb9"},
     {file = "certifi-2023.7.22.tar.gz", hash = "sha256:539cc1d13202e33ca466e88b2807e29f4c13049d6d87031a3c110744495cb082"},
@@ -288,7 +288,7 @@ files = [
     {file = "cffi-1.16.0-cp39-cp39-win_amd64.whl", hash = "sha256:3686dffb02459559c74dd3d81748269ffb0eb027c39a6fc99502de37d501faa8"},
     {file = "cffi-1.16.0.tar.gz", hash = "sha256:bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0"},
 ]
-markers = {main = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_python_implementation != \"PyPy\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\" and platform_python_implementation != \"PyPy\"", security = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_python_implementation != \"PyPy\"", test = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_python_implementation != \"PyPy\""}
+markers = {main = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_python_implementation != \"PyPy\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\" and platform_python_implementation != \"PyPy\"", security = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_python_implementation != \"PyPy\"", test = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_python_implementation != \"PyPy\""}
 
 [package.dependencies]
 pycparser = "*"
@@ -300,7 +300,7 @@ description = "Validate configuration and produce human readable error messages.
 optional = false
 python-versions = ">=3.8"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "cfgv-3.4.0-py2.py3-none-any.whl", hash = "sha256:b7265b1f29fd3316bfcd2b330d63d024f2bfd8bcb8b0272f8e19a504856c48f9"},
     {file = "cfgv-3.4.0.tar.gz", hash = "sha256:e52591d4c5f5dead8e0f673fb16db7949d2cfb3f7da4582893288f0ded8fe560"},
@@ -313,7 +313,7 @@ description = "The Real First Universal Charset Detector. Open, modern and activ
 optional = false
 python-versions = ">=3.7.0"
 groups = ["security", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "charset-normalizer-3.3.2.tar.gz", hash = "sha256:f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"},
     {file = "charset_normalizer-3.3.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:25baf083bf6f6b341f4121c2f3c548875ee6f5339300e08be3f2b2ba1721cdd3"},
@@ -414,7 +414,7 @@ description = "Composable command line interface toolkit"
 optional = false
 python-versions = ">=3.7"
 groups = ["lint", "security", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
     {file = "click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"},
@@ -430,7 +430,7 @@ description = "Colorization of help messages in Click"
 optional = false
 python-versions = "*"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "click-help-colors-0.9.2.tar.gz", hash = "sha256:756245e542d29226bb3bc056bfa58886f212ba2b82f4e8cf5fc884176ac96d72"},
     {file = "click_help_colors-0.9.2-py3-none-any.whl", hash = "sha256:82ef028cb0a332a154fa42fd7cca2c728a019b32bcb5a26bb32367551014a16f"},
@@ -449,7 +449,7 @@ description = "Cross-platform colored terminal text."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 groups = ["lint", "security", "test"]
-markers = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system == \"Windows\""
+markers = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system == \"Windows\""
 files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
@@ -491,7 +491,7 @@ files = [
     {file = "cryptography-44.0.0-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:62901fb618f74d7d81bf408c8719e9ec14d863086efe4185afd07c352aee1d2c"},
     {file = "cryptography-44.0.0.tar.gz", hash = "sha256:cd4e834f340b4293430701e772ec543b0fbe6c2dea510a5286fe0acabe153a02"},
 ]
-markers = {main = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {main = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 cffi = {version = ">=1.12", markers = "platform_python_implementation != \"PyPy\""}
@@ -513,7 +513,7 @@ description = "Distribution utilities"
 optional = false
 python-versions = "*"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "distlib-0.3.7-py2.py3-none-any.whl", hash = "sha256:2e24928bc811348f0feb63014e97aaae3037f2cf48712d51ae61df7fd6075057"},
     {file = "distlib-0.3.7.tar.gz", hash = "sha256:9dafe54b34a028eafd95039d5e5d4851a13734540f1331060d31c9916e7147a8"},
@@ -526,7 +526,7 @@ description = "Distro - an OS platform information API"
 optional = false
 python-versions = ">=3.6"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\""
 files = [
     {file = "distro-1.8.0-py3-none-any.whl", hash = "sha256:99522ca3e365cac527b44bde033f64c6945d90eb9f769703caaec52b09bbd3ff"},
     {file = "distro-1.8.0.tar.gz", hash = "sha256:02e111d1dc6a50abb8eed6bf31c3e48ed8b0830d1ea2a1b78c61765c2513fdd8"},
@@ -539,7 +539,7 @@ description = "A Python library for the Docker Engine API."
 optional = false
 python-versions = ">=3.7"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "docker-6.1.3-py3-none-any.whl", hash = "sha256:aecd2277b8bf8e506e484f6ab7aec39abe0038e29fa4a6d3ba86c3fe01844ed9"},
     {file = "docker-6.1.3.tar.gz", hash = "sha256:aa6d17830045ba5ef0168d5eaa34d37beeb113948c413affe1d5991fc11f9a20"},
@@ -562,7 +562,7 @@ description = "A parser for Python dependency files"
 optional = false
 python-versions = ">=3.7"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "dparse-0.6.4-py3-none-any.whl", hash = "sha256:fbab4d50d54d0e739fbb4dedfc3d92771003a5b9aa8545ca7a7045e3b174af57"},
     {file = "dparse-0.6.4.tar.gz", hash = "sha256:90b29c39e3edc36c6284c82c4132648eaf28a01863eb3c231c2512196132201a"},
@@ -584,7 +584,7 @@ description = "enrich"
 optional = false
 python-versions = ">=3.6"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "enrich-1.2.7-py3-none-any.whl", hash = "sha256:f29b2c8c124b4dbd7c975ab5c3568f6c7a47938ea3b7d2106c8a3bd346545e4f"},
     {file = "enrich-1.2.7.tar.gz", hash = "sha256:0a2ab0d2931dff8947012602d1234d2a3ee002d9a355b5d70be6bf5466008893"},
@@ -607,7 +607,7 @@ files = [
     {file = "filelock-3.16.1-py3-none-any.whl", hash = "sha256:2082e5703d51fbf98ea75855d9d5527e33d8ff23099bec374a134febee6946b0"},
     {file = "filelock-3.16.1.tar.gz", hash = "sha256:c249fbfcd5db47e5e2d6d62198e565475ee65e4831e2561c8e313fa7eb961435"},
 ]
-markers = {dev = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {dev = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.extras]
 docs = ["furo (>=2024.8.6)", "sphinx (>=8.0.2)", "sphinx-autodoc-typehints (>=2.4.1)"]
@@ -621,7 +621,7 @@ description = "File identification library for Python"
 optional = false
 python-versions = ">=3.8"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "identify-2.5.31-py2.py3-none-any.whl", hash = "sha256:90199cb9e7bd3c5407a9b7e81b4abec4bb9d249991c79439ec8af740afc6293d"},
     {file = "identify-2.5.31.tar.gz", hash = "sha256:7736b3c7a28233637e3c36550646fc6389bedd74ae84cb788200cc8e2dd60b75"},
@@ -637,7 +637,7 @@ description = "Internationalized Domain Names in Applications (IDNA)"
 optional = false
 python-versions = ">=3.5"
 groups = ["security", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "idna-3.4-py3-none-any.whl", hash = "sha256:90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2"},
     {file = "idna-3.4.tar.gz", hash = "sha256:814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"},
@@ -650,7 +650,7 @@ description = "Read metadata from Python packages"
 optional = false
 python-versions = ">=3.8"
 groups = ["lint"]
-markers = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\""
+markers = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\""
 files = [
     {file = "importlib_metadata-7.1.0-py3-none-any.whl", hash = "sha256:30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570"},
     {file = "importlib_metadata-7.1.0.tar.gz", hash = "sha256:b78938b926ee8d5f020fc4772d487045805a55ddbad2ecf21c6d60938dc7fcd2"},
@@ -671,7 +671,7 @@ description = "Pythonic task execution"
 optional = false
 python-versions = ">=3.6"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "invoke-2.2.0-py3-none-any.whl", hash = "sha256:6ea924cc53d4f78e3d98bc436b08069a03077e6f85ad1ddaa8a116d7dad15820"},
     {file = "invoke-2.2.0.tar.gz", hash = "sha256:ee6cbb101af1a859c7fe84f2a264c059020b0cb7fe3535f9424300ab568f6bd5"},
@@ -684,7 +684,7 @@ description = "A Python utility / library to sort Python imports."
 optional = false
 python-versions = ">=3.9.0"
 groups = ["lint"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "isort-6.0.1-py3-none-any.whl", hash = "sha256:2dc5d7f65c9678d94c88dfc29161a320eec67328bc97aad576874cb4be1e9615"},
     {file = "isort-6.0.1.tar.gz", hash = "sha256:1cb5df28dfbc742e490c5e41bad6da41b805b0a8be7bc93cd0fb2a8a890ac450"},
@@ -705,7 +705,7 @@ files = [
     {file = "jinja2-3.1.4-py3-none-any.whl", hash = "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"},
     {file = "jinja2-3.1.4.tar.gz", hash = "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"},
 ]
-markers = {main = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {main = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 MarkupSafe = ">=2.0"
@@ -724,7 +724,7 @@ files = [
     {file = "jsonschema-4.19.2-py3-none-any.whl", hash = "sha256:eee9e502c788e89cb166d4d37f43084e3b64ab405c795c03d343a4dbc2c810fc"},
     {file = "jsonschema-4.19.2.tar.gz", hash = "sha256:c9ff4d7447eed9592c23a12ccee508baf0dd0d59650615e847feb6cdca74f392"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 attrs = ">=22.2.0"
@@ -747,7 +747,7 @@ files = [
     {file = "jsonschema_specifications-2023.7.1-py3-none-any.whl", hash = "sha256:05adf340b659828a004220a9613be00fa3f223f2b82002e273dee62fd50524b1"},
     {file = "jsonschema_specifications-2023.7.1.tar.gz", hash = "sha256:c91a50404e88a1f6ba40636778e2ee08f6e24c5613fe4c53ac24578a5a7f72bb"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 referencing = ">=0.28.0"
@@ -763,7 +763,7 @@ files = [
     {file = "markdown-it-py-3.0.0.tar.gz", hash = "sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"},
     {file = "markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 mdurl = ">=0.1,<1.0"
@@ -847,7 +847,7 @@ files = [
     {file = "MarkupSafe-2.1.3-cp39-cp39-win_amd64.whl", hash = "sha256:3fd4abcb888d15a94f32b75d8fd18ee162ca0c064f35b11134be77050296d6ba"},
     {file = "MarkupSafe-2.1.3.tar.gz", hash = "sha256:af598ed32d6ae86f1b747b82783958b1a4ab8f617b06fe68795c7f026abbdcad"},
 ]
-markers = {main = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {main = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [[package]]
 name = "marshmallow"
@@ -856,7 +856,7 @@ description = "A lightweight library for converting complex datatypes to and fro
 optional = false
 python-versions = ">=3.8"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "marshmallow-3.20.1-py3-none-any.whl", hash = "sha256:684939db93e80ad3561392f47be0230743131560a41c5110684c16e21ade0a5c"},
     {file = "marshmallow-3.20.1.tar.gz", hash = "sha256:5d2371bbe42000f2b3fb5eaa065224df7d8f8597bc19a1bbfa5bfe7fba8da889"},
@@ -882,7 +882,7 @@ files = [
     {file = "mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {file = "mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [[package]]
 name = "molecule"
@@ -891,7 +891,7 @@ description = "Molecule aids in the development and testing of Ansible roles"
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "molecule-24.12.0-py3-none-any.whl", hash = "sha256:c650d92295860ce17d79048b1dabb787f674718870668d99b52ecdc0e88af541"},
     {file = "molecule-24.12.0.tar.gz", hash = "sha256:7243ff58e0b8159aa2cf465ba9605d657f1d614617264307bef5b32518467afe"},
@@ -918,25 +918,26 @@ testinfra = ["pytest-testinfra (>=8.1.0)"]
 
 [[package]]
 name = "molecule-plugins"
-version = "23.5.3"
+version = "23.6.0"
 description = "Molecule Plugins"
 optional = false
 python-versions = ">=3.9"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
-    {file = "molecule-plugins-23.5.3.tar.gz", hash = "sha256:a2b1437d532d736e3fbc6db7a69ec533e2334b2115ff9245a0b2772ed9738d23"},
-    {file = "molecule_plugins-23.5.3-py3-none-any.whl", hash = "sha256:87f8ac8d5e9fe1cbdfb784d92b1fd08e7cb11bf02a9391bb34dcb93fadf7a3fc"},
+    {file = "molecule_plugins-23.6.0-py3-none-any.whl", hash = "sha256:be3d15329ede00d79a0a60482e8c78cfbb2d18500ad98319c0c076cb833db340"},
+    {file = "molecule_plugins-23.6.0.tar.gz", hash = "sha256:432586a21226ef72fca5eaafb56ec7c0dc6d5e471f4e1e5272be5425357bcd2c"},
 ]
 
 [package.dependencies]
 docker = {version = ">=4.3.1", optional = true, markers = "extra == \"docker\""}
 molecule = ">=6.0.0a1"
 requests = {version = "*", optional = true, markers = "extra == \"docker\""}
-selinux = {version = "*", optional = true, markers = "(sys_platform == \"linux\" or sys_platform == \"linux2\") and extra == \"docker\""}
+selinux = {version = "*", optional = true, markers = "(sys_platform == \"linux2\" or sys_platform == \"linux\") and extra == \"docker\""}
 
 [package.extras]
-docker = ["docker (>=4.3.1)", "requests", "selinux ; sys_platform == \"linux\" or sys_platform == \"linux2\"", "selinux ; sys_platform == \"linux2\""]
+docker = ["docker (>=4.3.1)", "requests", "selinux ; sys_platform == \"linux\"", "selinux ; sys_platform == \"linux2\" or sys_platform == \"linux\""]
+gce = ["google-auth (>=2.28.2)", "requests (>=2.31.0)"]
 openstack = ["openstacksdk (>=1.1.0)"]
 selinux = ["selinux ; sys_platform == \"linux\"", "selinux ; sys_platform == \"linux2\""]
 test = ["molecule[test] (>=6.0.0a1)", "pytest-helpers-namespace (>=2019.1.8)"]
@@ -949,7 +950,7 @@ description = "Optional static typing for Python"
 optional = false
 python-versions = ">=3.9"
 groups = ["typing"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "mypy-1.15.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:979e4e1a006511dacf628e36fadfecbcc0160a8af6ca7dad2f5025529e082c13"},
     {file = "mypy-1.15.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:c4bb0e1bd29f7d34efcccd71cf733580191e9a264a2202b0239da95984c5b559"},
@@ -1003,7 +1004,7 @@ description = "Type system extensions for programs checked with the mypy type ch
 optional = false
 python-versions = ">=3.5"
 groups = ["lint", "typing"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},
     {file = "mypy_extensions-1.0.0.tar.gz", hash = "sha256:75dbf8955dc00442a438fc4d0666508a9a97b6bd41aa2f0ffe9d2f2725af0782"},
@@ -1016,7 +1017,7 @@ description = "Node.js virtual environment builder"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "nodeenv-1.8.0-py2.py3-none-any.whl", hash = "sha256:df865724bb3c3adc86b3876fa209771517b0cfe596beff01a92700e0e8be4cec"},
     {file = "nodeenv-1.8.0.tar.gz", hash = "sha256:d51e0c37e64fbf47d017feac3145cdbb58836d7eee8c6f6d3b6880c5456227d2"},
@@ -1032,7 +1033,7 @@ description = "Core utilities for Python packages"
 optional = false
 python-versions = ">=3.7"
 groups = ["main", "lint", "security", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "packaging-23.0-py3-none-any.whl", hash = "sha256:714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2"},
     {file = "packaging-23.0.tar.gz", hash = "sha256:b6ad297f8907de0fa2fe1ccbd26fdaf387f5f47c7275fedf8cce89f99446cf97"},
@@ -1045,7 +1046,7 @@ description = "Utility library for gitignore style pattern matching of file path
 optional = false
 python-versions = ">=3.7"
 groups = ["lint"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "pathspec-0.11.2-py3-none-any.whl", hash = "sha256:1d6ed233af05e679efb96b1851550ea95bbb64b7c490b0f5aa52996c11e92a20"},
     {file = "pathspec-0.11.2.tar.gz", hash = "sha256:e0d8d0ac2f12da61956eb2306b69f9469b42f4deb0f3cb6ed47b9cce9996ced3"},
@@ -1058,7 +1059,7 @@ description = "A small Python package for determining appropriate platform-speci
 optional = false
 python-versions = ">=3.7"
 groups = ["dev", "lint"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "platformdirs-3.11.0-py3-none-any.whl", hash = "sha256:e9d171d00af68be50e9202731309c4e658fd8bc76f55c11c7dd760d023bda68e"},
     {file = "platformdirs-3.11.0.tar.gz", hash = "sha256:cf8ee52a3afdb965072dcc652433e0c7e3e40cf5ea1477cd4b3b1d2eb75495b3"},
@@ -1075,7 +1076,7 @@ description = "plugin and hook calling mechanisms for python"
 optional = false
 python-versions = ">=3.8"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "pluggy-1.3.0-py3-none-any.whl", hash = "sha256:d89c696a773f8bd377d18e5ecda92b7a3793cbe66c87060a6fb58c7b6e1061f7"},
     {file = "pluggy-1.3.0.tar.gz", hash = "sha256:cf61ae8f126ac6f7c451172cf30e3e43d3ca77615509771b3a984a0730651e12"},
@@ -1092,7 +1093,7 @@ description = "A framework for managing and maintaining multi-language pre-commi
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "pre_commit-4.0.1-py2.py3-none-any.whl", hash = "sha256:efde913840816312445dc98787724647c65473daefe420785f885e8ed9a06878"},
     {file = "pre_commit-4.0.1.tar.gz", hash = "sha256:80905ac375958c0444c65e9cebebd948b3cdb518f335a091a670a89d652139d2"},
@@ -1112,7 +1113,7 @@ description = "Cross-platform lib for process and system monitoring in Python."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "psutil-6.1.1-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:9ccc4316f24409159897799b83004cb1e24f9819b0dcf9c0b68bdcb6cefee6a8"},
     {file = "psutil-6.1.1-cp27-cp27m-manylinux2010_i686.whl", hash = "sha256:ca9609c77ea3b8481ab005da74ed894035936223422dc591d6772b147421f777"},
@@ -1148,7 +1149,7 @@ files = [
     {file = "pycparser-2.21-py2.py3-none-any.whl", hash = "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"},
     {file = "pycparser-2.21.tar.gz", hash = "sha256:e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"},
 ]
-markers = {main = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_python_implementation != \"PyPy\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\" and platform_python_implementation != \"PyPy\"", security = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_python_implementation != \"PyPy\"", test = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_python_implementation != \"PyPy\""}
+markers = {main = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_python_implementation != \"PyPy\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\" and platform_python_implementation != \"PyPy\"", security = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_python_implementation != \"PyPy\"", test = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_python_implementation != \"PyPy\""}
 
 [[package]]
 name = "pydantic"
@@ -1157,7 +1158,7 @@ description = "Data validation using Python type hints"
 optional = false
 python-versions = ">=3.8"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "pydantic-2.7.4-py3-none-any.whl", hash = "sha256:ee8538d41ccb9c0a9ad3e0e5f07bf15ed8015b481ced539a1759d8cc89ae90d0"},
     {file = "pydantic-2.7.4.tar.gz", hash = "sha256:0c84efd9548d545f63ac0060c1e4d39bb9b14db8b3c0652338aecc07b5adec52"},
@@ -1178,7 +1179,7 @@ description = "Core functionality for Pydantic validation and serialization"
 optional = false
 python-versions = ">=3.8"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "pydantic_core-2.18.4-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:f76d0ad001edd426b92233d45c746fd08f467d56100fd8f30e9ace4b005266e4"},
     {file = "pydantic_core-2.18.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:59ff3e89f4eaf14050c8022011862df275b552caef8082e37b542b066ce1ff26"},
@@ -1275,7 +1276,7 @@ files = [
     {file = "Pygments-2.16.1-py3-none-any.whl", hash = "sha256:13fc09fa63bc8d8671a6d247e1eb303c4b343eaee81d861f3404db2935653692"},
     {file = "Pygments-2.16.1.tar.gz", hash = "sha256:1daff0494820c69bc8941e407aa20f577374ee88364ee10a98fdbe0aece96e29"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.extras]
 plugins = ["importlib-metadata ; python_version < \"3.8\""]
@@ -1312,7 +1313,7 @@ description = "YAML parser and emitter for Python"
 optional = false
 python-versions = ">=3.6"
 groups = ["main", "dev", "lint", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "PyYAML-6.0.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d858aa552c999bc8a8d57426ed01e40bef403cd8ccdd0fc5f6f04a00414cac2a"},
     {file = "PyYAML-6.0.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:fd66fc5d0da6d9815ba2cebeb4205f95818ff4b79c3ebe268e75d961704af52f"},
@@ -1378,7 +1379,7 @@ files = [
     {file = "referencing-0.30.2-py3-none-any.whl", hash = "sha256:449b6669b6121a9e96a7f9e410b245d471e8d48964c67113ce9afe50c8dd7bdf"},
     {file = "referencing-0.30.2.tar.gz", hash = "sha256:794ad8003c65938edcdbc027f1933215e0d0ccc0291e3ce20a4d87432b59efc0"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 attrs = ">=22.2.0"
@@ -1391,7 +1392,7 @@ description = "Python HTTP for Humans."
 optional = false
 python-versions = ">=3.7"
 groups = ["security", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f"},
     {file = "requests-2.31.0.tar.gz", hash = "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"},
@@ -1418,7 +1419,7 @@ files = [
     {file = "resolvelib-1.0.1-py2.py3-none-any.whl", hash = "sha256:d2da45d1a8dfee81bdd591647783e340ef3bcb104b54c383f70d422ef5cc7dbf"},
     {file = "resolvelib-1.0.1.tar.gz", hash = "sha256:04ce76cbd63fded2078ce224785da6ecd42b9564b1390793f64ddecbe997b309"},
 ]
-markers = {main = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {main = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.extras]
 examples = ["html5lib", "packaging", "pygraphviz", "requests"]
@@ -1437,7 +1438,7 @@ files = [
     {file = "rich-13.6.0-py3-none-any.whl", hash = "sha256:2b38e2fe9ca72c9a00170a1a2d20c63c790d0e10ef1fe35eba76e1e7b1d7d245"},
     {file = "rich-13.6.0.tar.gz", hash = "sha256:5c14d22737e6d5084ef4771b62d5d4363165b403455a30a1c8ca39dc7b644bef"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 markdown-it-py = ">=2.2.0"
@@ -1554,7 +1555,7 @@ files = [
     {file = "rpds_py-0.10.6-pp39-pypy39_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:e9616f5bd2595f7f4a04b67039d890348ab826e943a9bfdbe4938d0eba606971"},
     {file = "rpds_py-0.10.6.tar.gz", hash = "sha256:4ce5a708d65a8dbf3748d2474b580d606b1b9f91b5c6ab2a316e0b0cf7a4ba50"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [[package]]
 name = "ruamel-yaml"
@@ -1567,7 +1568,7 @@ files = [
     {file = "ruamel.yaml-0.18.6-py3-none-any.whl", hash = "sha256:57b53ba33def16c4f3d807c0ccbc00f8a6081827e81ba2491691b76882d0c636"},
     {file = "ruamel.yaml-0.18.6.tar.gz", hash = "sha256:8b27e6a217e786c6fbe5634d8f3f11bc63e0f80f6a5890f28863d9c45aac311b"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", security = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", security = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.extras]
 docs = ["mercurial (>5.7)", "ryd"]
@@ -1580,7 +1581,7 @@ description = "An extremely fast Python linter and code formatter, written in Ru
 optional = false
 python-versions = ">=3.7"
 groups = ["lint"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "ruff-0.9.10-py3-none-linux_armv6l.whl", hash = "sha256:eb4d25532cfd9fe461acc83498361ec2e2252795b4f40b17e80692814329e42d"},
     {file = "ruff-0.9.10-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:188a6638dab1aa9bb6228a7302387b2c9954e455fb25d6b4470cb0641d16759d"},
@@ -1609,7 +1610,7 @@ description = "Checks installed dependencies for known vulnerabilities and licen
 optional = false
 python-versions = ">=3.8"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "safety-3.2.14-py3-none-any.whl", hash = "sha256:23ceeb06038ff65607c7f1311bffa3e92b029148b367b360ad8287d9f3395194"},
     {file = "safety-3.2.14.tar.gz", hash = "sha256:7a45d88b1903c5b7c370eaeb6ca131a52f147e0b8a0b302265f82824ef92adc7"},
@@ -1646,7 +1647,7 @@ description = "Schemas for Safety tools"
 optional = false
 python-versions = ">=3.7"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "safety_schemas-0.0.10-py3-none-any.whl", hash = "sha256:83978c14fcf598f00a6d98e70450e635d3deb33b3abbb5a886004ade7ca84b7f"},
     {file = "safety_schemas-0.0.10.tar.gz", hash = "sha256:5ec83bb19e17003748d2a4b11e43e1f2b4471c9434329e9a0d80d1069966b96c"},
@@ -1666,7 +1667,7 @@ description = "shim selinux module"
 optional = false
 python-versions = ">=3.9"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\""
 files = [
     {file = "selinux-0.3.0-py2.py3-none-any.whl", hash = "sha256:ecf7add45c939e9dda682c390a2cd0a845c94a4793a2cce9e8870d4ee9501f99"},
     {file = "selinux-0.3.0.tar.gz", hash = "sha256:2a88b337ac46ad0f06f557b2806c3df62421972f766673dd8bf26732fb75a9ea"},
@@ -1682,7 +1683,7 @@ description = "Easily download, build, install, upgrade, and uninstall Python pa
 optional = false
 python-versions = ">=3.8"
 groups = ["dev", "security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "setuptools-74.1.2-py3-none-any.whl", hash = "sha256:5f4c08aa4d3ebcb57a50c33b1b07e94315d7fc7230f7115e47fc99776c8ce308"},
     {file = "setuptools-74.1.2.tar.gz", hash = "sha256:95b40ed940a1c67eb70fc099094bd6e99c6ee7c23aa2306f4d2697ba7916f9c6"},
@@ -1704,7 +1705,7 @@ description = "Tool to Detect Surrounding Shell"
 optional = false
 python-versions = ">=3.7"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686"},
     {file = "shellingham-1.5.4.tar.gz", hash = "sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de"},
@@ -1721,7 +1722,7 @@ files = [
     {file = "subprocess-tee-0.4.1.tar.gz", hash = "sha256:b3c124993f8b88d1eb1c2fde0bc2069787eac720ba88771cba17e8c93324825d"},
     {file = "subprocess_tee-0.4.1-py3-none-any.whl", hash = "sha256:eca56973a1c1237093c2055b2731bcaab784683b83f22c76f26e4c5763402e28"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.extras]
 test = ["enrich (>=1.2.6)", "molecule (>=3.4.0)", "pytest (>=6.2.5)", "pytest-cov (>=2.12.1)", "pytest-plus (>=0.2)", "pytest-xdist (>=2.3.0)"]
@@ -1733,7 +1734,7 @@ description = "Typer, build great CLIs. Easy to code. Based on Python type hints
 optional = false
 python-versions = ">=3.7"
 groups = ["security"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "typer-0.15.1-py3-none-any.whl", hash = "sha256:7994fb7b8155b64d3402518560648446072864beefd44aa2dc36972a5972e847"},
     {file = "typer-0.15.1.tar.gz", hash = "sha256:a0588c0a7fa68a1978a069818657778f86abe6ff5ea6abf472f940a08bfe4f0a"},
@@ -1752,7 +1753,7 @@ description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 groups = ["security", "typing"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "typing_extensions-4.8.0-py3-none-any.whl", hash = "sha256:8f92fc8806f9a6b641eaa5318da32b44d401efaac0f6678c9bc448ba3605faa0"},
     {file = "typing_extensions-4.8.0.tar.gz", hash = "sha256:df8e4339e9cb77357558cbdbceca33c303714cf861d1eef15e1070055ae8b7ef"},
@@ -1765,7 +1766,7 @@ description = "HTTP library with thread-safe connection pooling, file post, and 
 optional = false
 python-versions = ">=3.7"
 groups = ["security", "test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "urllib3-2.0.7-py3-none-any.whl", hash = "sha256:fdb6d215c776278489906c2f8916e6e7d4f5a9b602ccbcfdf7f016fc8da0596e"},
     {file = "urllib3-2.0.7.tar.gz", hash = "sha256:c97dfde1f7bd43a71c8d2a58e369e9b2bf692d1334ea9f9cae55add7d0dd0f84"},
@@ -1784,7 +1785,7 @@ description = "Virtual Python Environment builder"
 optional = false
 python-versions = ">=3.8"
 groups = ["dev"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "virtualenv-20.27.1-py3-none-any.whl", hash = "sha256:f11f1b8a29525562925f745563bfd48b189450f61fb34c4f9cc79dd5aa32a1f4"},
     {file = "virtualenv-20.27.1.tar.gz", hash = "sha256:142c6be10212543b32c6c45d3d3893dff89112cc588b7d0879ae5a1ec03a47ba"},
@@ -1810,7 +1811,7 @@ files = [
     {file = "wcmatch-8.5-py3-none-any.whl", hash = "sha256:14554e409b142edeefab901dc68ad570b30a72a8ab9a79106c5d5e9a6d241bd5"},
     {file = "wcmatch-8.5.tar.gz", hash = "sha256:86c17572d0f75cbf3bcb1a18f3bf2f9e72b39a9c08c9b4a74e991e1882a8efb3"},
 ]
-markers = {lint = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\"", test = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""}
+markers = {lint = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\"", test = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""}
 
 [package.dependencies]
 bracex = ">=2.1.1"
@@ -1822,7 +1823,7 @@ description = "WebSocket client for Python with low level API options"
 optional = false
 python-versions = ">=3.8"
 groups = ["test"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "websocket-client-1.6.4.tar.gz", hash = "sha256:b3324019b3c28572086c4a319f91d1dcd44e6e11cd340232978c684a7650d0df"},
     {file = "websocket_client-1.6.4-py3-none-any.whl", hash = "sha256:084072e0a7f5f347ef2ac3d8698a5e0b4ffbfcab607628cadabc650fc9a83a24"},
@@ -1840,7 +1841,7 @@ description = "A linter for YAML files."
 optional = false
 python-versions = ">=3.8"
 groups = ["lint"]
-markers = "sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\""
+markers = "sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\""
 files = [
     {file = "yamllint-1.35.1-py3-none-any.whl", hash = "sha256:2e16e504bb129ff515b37823b472750b36b6de07963bd74b307341ef5ad8bdc3"},
     {file = "yamllint-1.35.1.tar.gz", hash = "sha256:7a003809f88324fd2c877734f2d575ee7881dd9043360657cc8049c809eba6cd"},
@@ -1860,7 +1861,7 @@ description = "Backport of pathlib-compatible object wrapper for zip files"
 optional = false
 python-versions = ">=3.8"
 groups = ["lint"]
-markers = "(sys_platform == \"linux\" or sys_platform == \"linux2\" or sys_platform != \"linux\" and sys_platform != \"linux2\") and platform_system != \"Windows\""
+markers = "(sys_platform == \"linux2\" or sys_platform == \"linux\" or sys_platform != \"linux2\" and sys_platform != \"linux\") and platform_system != \"Windows\""
 files = [
     {file = "zipp-3.19.2-py3-none-any.whl", hash = "sha256:f091755f667055f2d02b32c53771a7a6c8b47e1fdbc4b72a8b9072b3eef8015c"},
     {file = "zipp-3.19.2.tar.gz", hash = "sha256:bf1dcf6450f873a13e952a29504887c89e6de7506209e5b1bcc3460135d4de19"},
@@ -1873,4 +1874,4 @@ test = ["big-O", "importlib-resources ; python_version < \"3.9\"", "jaraco.funct
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "76ce664e02ab4e4e69579750683ad46143c9c92d1458692ffc182a83c7f61732"
+content-hash = "9905f8d2eec8077f0ab0c62eee74fec6d4ab24dd97fe64589d044e430fae15d2"
