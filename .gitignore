@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ansible
+.ansible/roles/fedejaure.rpi_lcd
