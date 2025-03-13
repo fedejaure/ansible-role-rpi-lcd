@@ -25,11 +25,11 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.10
+    rev: v0.10.0
     hooks:
       - id: ruff
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.35.1
+    rev: v1.36.0
     hooks:
       - id: yamllint
   - repo: https://github.com/ansible-community/ansible-lint.git
