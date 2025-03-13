@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Debian `Stretch` and `buster` support.
 - Ubuntu `Bionic Beaver` and `Focal Fossa` support.
 
+### Changed
+- updated deps.
+
 ## [0.2.0] - 2023-04-10
 ### Changed
 - updated deps.
