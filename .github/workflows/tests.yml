@@ -14,10 +14,10 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
 
@@ -26,7 +26,7 @@ jobs:
         run: |
           pip install poetry
           poetry config virtualenvs.in-project true
-          poetry install --no-root --only dev --only flakeheaven --sync
+          poetry install --no-root --only dev --sync
 
       - name: Linting
         shell: bash
@@ -39,18 +39,18 @@ jobs:
     strategy:
       matrix:
         distro:
-          - debian9
-          - debian10
-          - ubuntu1804
-          - ubuntu2004
+          - debian11
+          - debian12
+          - ubuntu2204
+          - ubuntu2404
       fail-fast: false
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           path: "${{ env.ROLE_NAME }}"
 
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
 
@@ -67,10 +67,10 @@ jobs:
         shell: bash
         run: poetry run inv galaxy-install
 
-      - name: Run safety check
+      - name: Run security check
         working-directory: "./${{ env.ROLE_NAME }}"
         shell: bash
-        run: poetry run inv safety
+        run: poetry run inv security
 
       - name: Run Molecule tests
         working-directory: "./${{ env.ROLE_NAME }}"

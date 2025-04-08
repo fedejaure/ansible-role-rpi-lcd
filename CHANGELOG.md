@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2025-04-08
+### Added
+- Debian `Bullseye` and `Bookworm` support.
+- Ubuntu `Jammy Jellyfish` and `Noble Numbat` support.
+
+### Removed
+- Debian `Stretch` and `buster` support.
+- Ubuntu `Bionic Beaver` and `Focal Fossa` support.
+
+### Changed
+- updated deps.
+
 ## [0.2.0] - 2023-04-10
 ### Changed
 - updated deps.
@@ -57,7 +69,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - MPI3501 support.
 
-[Unreleased]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.2.0...develop
+[Unreleased]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.3.0...develop
+[0.3.0]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.9...0.2.0
 [0.1.9]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/fedejaure/ansible-role-rpi-lcd/compare/0.1.7...0.1.8
