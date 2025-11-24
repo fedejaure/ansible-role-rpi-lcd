@@ -988,34 +988,29 @@ files = [
 
 [[package]]
 name = "molecule"
-version = "25.7.0"
+version = "25.11.0"
 description = "Molecule aids in the development and testing of Ansible roles"
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
 files = [
-    {file = "molecule-25.7.0-py3-none-any.whl", hash = "sha256:4184fdc2494a17fe6aecb144c01e14e6929cc5d2b5461ebfe90ed3fe3f37d01d"},
-    {file = "molecule-25.7.0.tar.gz", hash = "sha256:a258ccaf0a2d15aa0b492fc4a5ad63868bb229e098451cd9a58fbf4015bba510"},
+    {file = "molecule-25.11.0-py3-none-any.whl", hash = "sha256:a8362c007ceab828ad0363eb837dd2258cacce696593078d2b84c8c2ee393980"},
+    {file = "molecule-25.11.0.tar.gz", hash = "sha256:f3e5b51db04a317b698bcbe681e1e7466c09edd3838d4d5087d621bd9e44b73f"},
 ]
 
 [package.dependencies]
 ansible-compat = ">=25.1.4"
 ansible-core = ">=2.15.0"
 click = ">=8.0,<9"
-click-help-colors = "*"
+click-help-colors = ">=0.9.4"
 enrich = ">=1.2.7"
-Jinja2 = ">=2.11.3"
+jinja2 = ">=2.11.3"
 jsonschema = ">=4.9.1"
-packaging = "*"
+packaging = ">=25.0"
 pluggy = ">=0.7.1,<2.0"
-PyYAML = ">=5.1"
+pyyaml = ">=5.1"
 rich = ">=9.5.1"
 wcmatch = ">=8.1.2"
-
-[package.extras]
-docs = ["linkchecker (>=10.4.0)", "mkdocs-ansible (>=24.3.0)"]
-test = ["ansi2html (>=1.8.0)", "ansible-lint (>=6.12.1)", "ansible-navigator", "coverage[toml]", "docker (>=7.1.0)", "filelock (>=3.9.0)", "mypy", "pexpect (>=4.9.0,<5)", "pre-commit", "pydoclint", "pylint", "pytest", "pytest-instafail", "pytest-mock (>=3.10.0)", "pytest-plus (>=0.7.0)", "pytest-xdist", "requests (!=2.32.0)", "ruff", "toml-sort", "tox", "types-jsonschema", "types-pexpect", "types-pyyaml"]
-testinfra = ["pytest-testinfra (>=8.1.0)"]
 
 [[package]]
 name = "molecule-plugins"
@@ -2228,4 +2223,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "<3.12,>=3.11"
-content-hash = "e247da2f285401dda5d464fe7a6d38514f5da48abc499476598c37643400f206"
+content-hash = "01fefd87f40fee505b982ed16ad7ea86384daad391c4ce07af59798e848b06fa"
