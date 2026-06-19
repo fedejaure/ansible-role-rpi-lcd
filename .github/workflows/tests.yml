@@ -14,12 +14,12 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v6.2.0
         with:
-          python-version: 3.11
+          python-version-file: '.python-version'
 
       - name: Install system deps
         shell: bash
@@ -45,14 +45,14 @@ jobs:
           - ubuntu2404
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           path: "${{ env.ROLE_NAME }}"
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v6.2.0
         with:
-          python-version: 3.11
+          python-version-file: './${{ env.ROLE_NAME }}/.python-version'
 
       - name: Install system deps
         working-directory: "./${{ env.ROLE_NAME }}"
