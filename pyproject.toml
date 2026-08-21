@@ -1,6 +1,6 @@
 [project]
 name = "rpi-lcd"
-version = "0.4.1"
+version = "0.4.2"
 description = "Ansible Role - Raspberry Pi LCD."
 authors = [
     {name = "Federico Jaureguialzo", email = "fedejaure@gmail.com"}
